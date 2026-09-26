@@ -1,0 +1,37 @@
+# Baseline A Configuration: Classical 3D Detection + Physical Nearest-Neighbor Tracking
+
+experiment:
+  name: "baseline_classical_dog_nn"
+  description: "Classical 3D anisotropic Difference-of-Gaussians with Hungarian nearest-neighbor association"
+  seed: 42
+
+dataset:
+  name: "t101"
+  path: "data/samples/t101"
+  voxel_scale: [1.625, 0.40625, 0.40625] # [Z, Y, X] in micrometers
+
+preprocessing:
+  normalize: true
+  quantile_low: 0.01
+  quantile_high: 0.999
+  gamma: 1.0
+
+detection:
+  method: "dog"
+  physical_radius_um: 1.5 # Empirically optimized radius (64.5% recall on GT nuclei)
+  sigma_ratio: 1.6 # Standard DoG ratio
+  threshold_percentile: 98.5 # Intensity threshold percentile
+  min_distance_voxels: [2, 6, 6] # [Z, Y, X] local maxima suppression window
+
+tracking:
+  method: "nearest_neighbor"
+  solver: "hungarian" # Optimal bipartite assignment (scipy.optimize.linear_sum_assignment)
+  max_physical_distance_um: 7.0 # Gating threshold in micrometers
+
+lineage:
+  allow_divisions: false # Baseline A is linear tracking only
+
+evaluation:
+  match_max_distance_um: 7.0 # Official competition node matching cutoff
+  adjustment_alpha: 0.1 # Node count penalty weight
+  division_weight: 0.1 # Weight of division Jaccard in combined score

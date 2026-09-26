@@ -1,0 +1,11 @@
+gt_source_id,gt_target_id,true_displacement_um,r1_endpoint_dist_um,motion_distance_um,motion_prediction_mode,static_rec_a1,motion_rec_m1,static_rec_a3,motion_rec_m3,reason_for_difference
+1000007,2000013,3.3746,7.04,7.04,static_fallback,0,0,0,0,Large displacement (7.04 µm) exceeds 5.0 µm gate
+2000013,3000022,2.0715,2.3884,2.3884,static_fallback,1,1,1,1,Hungarian competition / track fragmentation
+3000022,4000032,2.1877,3.7593,2.6065,velocity_extrapolated,0,0,0,0,Hungarian competition / candidate conflict within 5.0 µm gate
+4000028,5000038,8.3256,10.7187,8.1413,velocity_extrapolated,0,0,0,0,Large displacement (10.72 µm) exceeds 5.0 µm gate
+4000030,5000040,3.4471,3.8364,3.8364,static_fallback,0,0,0,0,Hungarian competition / candidate conflict within 5.0 µm gate
+5000038,6000046,3.3004,7.3824,6.3805,velocity_extrapolated,0,0,0,0,Large displacement (7.38 µm) exceeds 5.0 µm gate
+5000040,6000048,1.7236,2.5622,3.5872,velocity_extrapolated,0,0,0,0,Hungarian competition / track fragmentation
+7000056,8000064,3.25,5.8299,3.0646,velocity_extrapolated,0,0,0,1,Hungarian competition / track fragmentation
+8000062,9000072,0.8125,3.5798,4.7037,velocity_extrapolated,0,0,0,0,Hungarian competition / candidate conflict within 5.0 µm gate
+9000077,10000084,3.3004,3.7258,5.4942,velocity_extrapolated,0,0,1,0,Recovered at 5.0 µm gate; gate-limited at 3.0 µm

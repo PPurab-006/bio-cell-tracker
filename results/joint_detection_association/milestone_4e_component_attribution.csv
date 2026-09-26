@@ -1,0 +1,6 @@
+factor,level_a,level_b,marginal_adj_jaccard_a,marginal_adj_jaccard_b,delta_adj_jaccard,marginal_edge_tp_a,marginal_edge_tp_b,delta_edge_tp,marginal_edge_fp_a,marginal_edge_fp_b,delta_edge_fp
+Detection Mode,Baseline (98.5%),Adaptive (95.0% + Temporal),0.1348,0.1311,-0.0037,5.0,6.17,1.17,10.0,19.33,9.33
+Association Geometry,Isotropic NN,Anisotropic Ellipsoidal,0.1205,0.1455,0.025,4.83,6.33,1.5,12.33,17.0,4.67
+Gate Size 3.0 → 5.0 µm,3.0 µm,5.0 µm,0.1297,0.1389,0.0091,4.75,6.0,1.25,9.25,16.0,6.75
+Gate Size 3.0 → 7.0 µm,3.0 µm,7.0 µm,0.1297,0.1303,0.0006,4.75,6.0,1.25,9.25,18.75,9.5
+Gate Size 5.0 → 7.0 µm,5.0 µm,7.0 µm,0.1389,0.1303,-0.0086,6.0,6.0,0.0,16.0,18.75,2.75

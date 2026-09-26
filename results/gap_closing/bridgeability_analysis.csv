@@ -1,0 +1,13 @@
+gt_source_id,gt_source_t,gt_target_id,gt_target_t,next_gt_id_if_available,source_detection_available,intermediate_detection_available,next_frame_detection_available,source_detection_id,intermediate_detection_id,next_frame_detection_id,source_distance_um,intermediate_distance_um,next_frame_distance_um,t_to_t2_detection_distance_um,classification
+1000004,0,2000011,1,3000020,True,False,False,141.0,,,5.9151,11.6403,11.8372,,not_bridgeable_later_endpoint_missing
+1000007,0,2000013,1,3000022,False,True,True,,296.0,422.0,11.4905,5.0086,5.3434,,not_bridgeable_source_endpoint_missing
+2000011,1,3000020,2,4000030,False,False,False,,,,11.6403,11.8372,11.9205,,not_bridgeable_both_endpoints_missing
+3000020,2,4000030,3,5000040,False,False,True,,,671.0,11.8372,11.9205,2.9575,,not_bridgeable_source_endpoint_missing
+4000030,3,5000040,4,6000048,False,True,True,,671.0,817.0,11.9205,2.9575,3.6336,,not_bridgeable_source_endpoint_missing
+6000050,5,7000058,6,8000068,True,False,False,818.0,,,5.929,8.7226,7.9815,,not_bridgeable_later_endpoint_missing
+7000058,6,8000068,7,9000077,False,False,False,,,,8.7226,7.9815,7.2786,,not_bridgeable_both_endpoints_missing
+8000068,7,9000077,8,10000084,False,False,False,,,,7.9815,7.2786,9.4229,,not_bridgeable_both_endpoints_missing
+8000070,7,9000079,8,10000086,False,True,True,,1175.0,1281.0,10.5937,2.8726,4.542,,not_bridgeable_source_endpoint_missing
+9000072,8,10000080,9,11000087,True,False,False,1166.0,,,2.6013,8.6941,,,not_bridgeable_no_t2_continuation_in_sample
+9000074,8,10000081,9,11000088,True,False,False,1170.0,,,4.7724,10.0336,,,not_bridgeable_no_t2_continuation_in_sample
+9000077,8,10000084,9,11000091,False,False,False,,,,7.2786,9.4229,,,not_bridgeable_no_t2_continuation_in_sample

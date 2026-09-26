@@ -1,0 +1,11 @@
+detector,refinement,association_method,gate_type,gate_xy_um,gate_z_um,configuration,edge_tp,edge_fp,edge_fn,edge_precision,edge_recall,edge_f1,adjusted_edge_jaccard,num_detections,num_edges,num_tracks,candidate_pairs,assignment_conflicts
+D2_Adaptive,R1_Quadratic,static,isotropic,3.0,3.0,R1_A1,6,5,21,0.5455,0.2222,0.3158,0.1875,1566,439,1127,660,152
+D2_Adaptive,R1_Quadratic,static,isotropic,4.0,4.0,R1_A2,9,13,18,0.4091,0.3333,0.3673,0.225,1566,669,897,1215,515
+D2_Adaptive,R1_Quadratic,static,isotropic,5.0,5.0,R1_A3,11,13,16,0.4583,0.4074,0.4314,0.275,1566,839,727,1915,1119
+D2_Adaptive,R1_Quadratic,static,anisotropic,3.0,5.0,R1_A5,7,12,20,0.3684,0.2593,0.3043,0.1795,1566,720,846,1248,485
+D2_Adaptive,R1_Quadratic,static,anisotropic,3.0,7.0,R1_A6,8,14,19,0.3636,0.2963,0.3265,0.1951,1566,852,714,1569,749
+D2_Adaptive,R1_Quadratic,motion,isotropic,3.0,3.0,R1_M1,6,11,21,0.3529,0.2222,0.2727,0.1579,1566,489,1077,730,159
+D2_Adaptive,R1_Quadratic,motion,isotropic,4.0,4.0,R1_M2,7,13,20,0.35,0.2593,0.2979,0.175,1566,709,857,1274,537
+D2_Adaptive,R1_Quadratic,motion,isotropic,5.0,5.0,R1_M3,9,14,18,0.3913,0.3333,0.36,0.2195,1566,847,719,1890,1105
+D2_Adaptive,R1_Quadratic,motion,anisotropic,3.0,5.0,R1_M5,6,13,21,0.3158,0.2222,0.2609,0.15,1566,740,826,1243,442
+D2_Adaptive,R1_Quadratic,motion,anisotropic,3.0,7.0,R1_M6,7,14,20,0.3333,0.2593,0.2917,0.1707,1566,833,733,1481,669

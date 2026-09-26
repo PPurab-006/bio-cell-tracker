@@ -1,0 +1,5 @@
+cell_radius_um,method,is_anisotropic,sigma_z_voxel,sigma_xy_voxel,num_predictions,tp,fp,fn,precision,recall,f1,mean_match_dist_um
+1.5,Anisotropic_R1.5um,True,0.533,2.132,1286,20,1266,11,0.0156,0.6452,0.0304,4.136
+1.5,Naive_Isotropic_R1.5um,False,2.132,2.132,590,13,577,18,0.022,0.4194,0.0419,3.334
+3.0,Anisotropic_R3.0um,True,1.066,4.264,461,5,456,26,0.0108,0.1613,0.0203,3.495
+3.0,Naive_Isotropic_R3.0um,False,4.264,4.264,241,7,234,24,0.029,0.2258,0.0515,2.843

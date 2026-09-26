@@ -1,0 +1,7 @@
+tracker_mode,direct_gate_um,gap_gate_um,total_nodes,direct_edges,gap_edges,total_edges,tracks,single_frame_tracks,single_frame_pct,mean_track_length,max_track_length,edge_tp,edge_fp,edge_fn,direct_tp,gap_tp,direct_fp,gap_fp,edge_precision,edge_recall,edge_f1,adj_edge_jaccard,gt_edges_recovered,bridgeable_gt_edges_recovered,false_gap_associations,fragmented_tracks_joined,gap_edges_corresponding_to_gt,gap_edges_unsupported_by_gt
+baseline_direct_only,3.0,0.0,1286,321,0,321,965,699,72.44,1.333,6,4,4,23,4,0,4,0,0.5,0.1481,0.2286,0.129,4,0,0,0,0,0
+gap_closing_4.0um,3.0,4.0,1286,321,118,439,847,546,64.46,1.518,7,4,5,23,4,0,4,1,0.4444,0.1481,0.2222,0.125,4,0,1,118,0,117
+gap_closing_5.0um,3.0,5.0,1286,321,179,500,786,479,60.94,1.636,7,4,5,23,4,0,4,1,0.4444,0.1481,0.2222,0.125,4,0,1,179,0,178
+gap_closing_6.0um,3.0,6.0,1286,321,259,580,706,385,54.53,1.822,7,4,7,23,4,0,4,3,0.3636,0.1481,0.2105,0.1176,4,0,3,259,0,256
+gap_closing_7.0um,3.0,7.0,1286,321,339,660,626,302,48.24,2.054,7,4,10,23,4,1,4,5,0.2857,0.1481,0.1951,0.1081,4,0,5,339,1,333
+gap_closing_8.0um,3.0,8.0,1286,321,398,719,567,257,45.33,2.268,7,4,10,23,4,1,4,5,0.2857,0.1481,0.1951,0.1081,4,0,5,398,1,392

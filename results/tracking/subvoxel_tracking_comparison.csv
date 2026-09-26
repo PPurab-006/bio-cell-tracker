@@ -1,0 +1,4 @@
+method,total_detections,total_edges,total_tracks,single_frame_tracks,single_frame_track_pct,mean_track_length,median_track_length,max_track_length,edge_tp,edge_fp,edge_fn,edge_precision,edge_recall,edge_f1,adj_edge_jaccard
+integer_peak,1286,321,965,699,72.44,1.33,1.0,6,4,4,23,0.5,0.1481,0.2286,0.129
+quadratic_refine,1286,345,941,674,71.63,1.37,1.0,4,3,5,24,0.375,0.1111,0.1714,0.0938
+centroid_refine,1286,331,955,691,72.36,1.35,1.0,6,3,5,24,0.375,0.1111,0.1714,0.0938

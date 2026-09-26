@@ -1,0 +1,10 @@
+method,axis,mean_um,median_um,p90_um,max_um
+integer_peak,Z_Axial,2.0312,1.625,4.875,4.875
+integer_peak,XY_Lateral,2.9667,2.7226,4.7597,5.9151
+integer_peak,Total_Physical,3.9308,3.5992,5.9165,6.1477
+quadratic_refine,Z_Axial,1.99,1.73,4.2132,4.5904
+quadratic_refine,XY_Lateral,2.9605,2.6352,4.8892,5.8374
+quadratic_refine,Total_Physical,3.852,3.5843,5.6133,5.8759
+centroid_refine,Z_Axial,2.0128,1.6393,4.6231,4.7354
+centroid_refine,XY_Lateral,2.9481,2.6818,4.8078,5.8548
+centroid_refine,Total_Physical,3.8759,3.5384,5.8352,5.9331

@@ -1,0 +1,8 @@
+configuration,mode,primary_percentile,secondary_percentile,use_temporal_evidence,total_detections,matched_gt_nodes,total_gt_nodes,node_recall,node_precision,node_f1,mean_localization_error_um,total_edges,edge_tp,edge_fp,edge_fn,edge_precision,edge_recall,edge_f1,adj_edge_jaccard,total_tracks,single_frame_tracks,single_frame_pct,mean_track_length
+Baseline (Single-Frame 98.5%),baseline,98.5,98.5,False,1286,20,31,0.6452,0.015552,0.0304,3.9308,321,4,4,23,0.5,0.1481,0.2286,0.129,965,699,72.44,1.333
+Naive Relaxed 96.0% (No Temporal),naive_ablation,98.5,96.0,False,1838,31,31,1.0,0.016866,0.0332,3.0144,480,3,8,24,0.2727,0.1111,0.1579,0.0857,1358,973,71.65,1.353
+Naive Relaxed 95.0% (No Temporal),naive_ablation,98.5,95.0,False,2017,31,31,1.0,0.015369,0.0303,3.0144,522,5,7,22,0.4167,0.1852,0.2564,0.1471,1495,1085,72.58,1.349
+Naive Relaxed 92.0% (No Temporal),naive_ablation,98.5,92.0,False,2406,31,31,1.0,0.012884,0.0254,3.0144,628,4,11,23,0.2667,0.1481,0.1905,0.1053,1778,1284,72.22,1.353
+Adaptive 96.0% (Temporal Support),adaptive_temporal,98.5,96.0,True,1522,28,31,0.9032,0.018397,0.0361,3.4927,396,3,7,24,0.3,0.1111,0.1622,0.0882,1126,810,71.94,1.352
+Adaptive 95.0% (Temporal Support),adaptive_temporal,98.5,95.0,True,1566,28,31,0.9032,0.01788,0.0351,3.4927,410,3,7,24,0.3,0.1111,0.1622,0.0882,1156,831,71.89,1.355
+Adaptive 92.0% (Temporal Support),adaptive_temporal,98.5,92.0,True,1640,28,31,0.9032,0.017073,0.0335,3.4927,425,4,9,23,0.3077,0.1481,0.2,0.1111,1215,888,73.09,1.35

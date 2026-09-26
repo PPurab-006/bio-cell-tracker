@@ -1,0 +1,14 @@
+comparison,coordinate_mode,gate_value,effective_xy_gate_um,effective_z_gate_um,num_edges,num_tracks,edge_tp,edge_fp,edge_fn,edge_recall,edge_precision,edge_f1,adj_edge_jaccard
+Physical_G2.0um,Physical (um),2.0 um,2.00 um,2.00 um,199,1087,1,2,26,0.037,0.3333,0.0667,0.0345
+Voxel_LatCalibrated_G2.0um,Voxel (XY-Matched),4.92 vx,2.00 um,8.00 um (4x over-permissive!),588,698,2,8,25,0.0741,0.2,0.1081,0.0571
+Physical_G3.0um,Physical (um),3.0 um,3.00 um,3.00 um,321,965,4,4,23,0.1481,0.5,0.2286,0.129
+Voxel_LatCalibrated_G3.0um,Voxel (XY-Matched),7.38 vx,3.00 um,12.00 um (4x over-permissive!),770,516,6,10,21,0.2222,0.375,0.2791,0.1622
+Physical_G4.0um,Physical (um),4.0 um,4.00 um,4.00 um,526,760,4,8,23,0.1481,0.3333,0.2051,0.1143
+Voxel_LatCalibrated_G4.0um,Voxel (XY-Matched),9.85 vx,4.00 um,16.00 um (4x over-permissive!),854,432,6,10,21,0.2222,0.375,0.2791,0.1622
+Physical_G5.0um,Physical (um),5.0 um,5.00 um,5.00 um,616,670,4,10,23,0.1481,0.2857,0.1951,0.1081
+Voxel_LatCalibrated_G5.0um,Voxel (XY-Matched),12.31 vx,5.00 um,20.00 um (4x over-permissive!),925,361,6,11,21,0.2222,0.3529,0.2727,0.1579
+Voxel_NaiveUnscaled_G2vx,Voxel (Naive Unscaled),2.0 vx,0.81 um,3.25 um,107,1179,0,0,27,0.0,0.0,0.0,0.0
+Voxel_NaiveUnscaled_G3vx,Voxel (Naive Unscaled),3.0 vx,1.22 um,4.88 um,291,995,1,1,26,0.037,0.5,0.069,0.0357
+Voxel_NaiveUnscaled_G4vx,Voxel (Naive Unscaled),4.0 vx,1.62 um,6.50 um,468,818,2,8,25,0.0741,0.2,0.1081,0.0571
+Voxel_NaiveUnscaled_G5vx,Voxel (Naive Unscaled),5.0 vx,2.03 um,8.12 um,602,684,2,8,25,0.0741,0.2,0.1081,0.0571
+Voxel_NaiveUnscaled_G7vx,Voxel (Naive Unscaled),7.0 vx,2.84 um,11.38 um,745,541,6,10,21,0.2222,0.375,0.2791,0.1622

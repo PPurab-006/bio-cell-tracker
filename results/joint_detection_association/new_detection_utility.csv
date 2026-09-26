@@ -1,0 +1,12 @@
+gt_node_id,t,detected_by_naive95,detected_by_adaptive95,has_gt_predecessor,has_gt_successor,participates_in_recovered_edge,configuration_where_first_recovered
+1000007,0,1,1,0,1,0,None
+2000011,1,1,1,1,1,1,D1_A1
+3000020,2,1,0,1,1,1,D1_A1
+4000030,3,1,1,1,1,1,D1_A2
+7000058,6,1,1,1,1,1,D1_A2
+8000068,7,1,1,1,1,1,D1_A1
+8000070,7,1,1,0,1,1,D1_A1
+9000077,8,1,0,1,1,1,D1_A1
+10000080,9,1,0,1,0,1,D1_A4
+10000081,9,1,1,1,0,1,D2_A1
+10000084,9,1,1,1,0,0,None

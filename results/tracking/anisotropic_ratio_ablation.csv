@@ -1,0 +1,5 @@
+gate_xy_um,gate_z_um,total_detections,total_predicted_edges,total_tracks,single_frame_tracks,single_frame_track_pct,mean_track_length,max_track_length,edge_tp,edge_fp,edge_fn,edge_precision,edge_recall,edge_f1,adj_edge_jaccard,gt_edges_recovered_of_27,gt_edges_endpoint_available_of_27,gt_edges_rejected_by_gate,gt_edges_lost_to_competition
+3.0,3.0,1286.0,321.0,965.0,699.0,72.44,1.33,6.0,4.0,4.0,23.0,0.5,0.1481,0.2286,0.129,4.0,15.0,11.0,0.0
+3.0,4.0,1286.0,492.0,794.0,483.0,60.83,1.62,6.0,4.0,7.0,23.0,0.3636,0.1481,0.2105,0.1176,4.0,15.0,10.0,1.0
+3.0,5.0,1286.0,543.0,743.0,416.0,55.99,1.73,9.0,5.0,9.0,22.0,0.3571,0.1852,0.2439,0.1389,5.0,15.0,9.0,1.0
+3.0,6.0,1286.0,634.0,652.0,346.0,53.07,1.97,9.0,5.0,10.0,22.0,0.3333,0.1852,0.2381,0.1351,5.0,15.0,9.0,1.0

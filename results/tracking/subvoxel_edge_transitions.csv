@@ -1,0 +1,16 @@
+gt_source_id,gt_target_id,source_t,target_t,gt_displacement_um,integer_peak_disp_um,integer_peak_linked,integer_peak_failure_mode,quadratic_refine_disp_um,quadratic_refine_linked,quadratic_refine_failure_mode,centroid_refine_disp_um,centroid_refine_linked,centroid_refine_failure_mode,quadratic_transition,centroid_transition
+2000013,3000022,1,2,2.0715,7.8879,False,still_exceeds_3um,8.3055,False,still_exceeds_3um,8.0197,False,still_exceeds_3um,both_failed,both_failed
+3000018,4000028,2,3,3.3746,3.8326,False,still_exceeds_3um,2.9815,False,competing_association,3.2607,False,still_exceeds_3um,both_failed,both_failed
+3000022,4000032,2,3,2.1877,12.1128,False,still_exceeds_3um,11.915,False,still_exceeds_3um,11.9387,False,still_exceeds_3um,both_failed,both_failed
+4000028,5000038,3,4,8.3256,10.4762,False,still_exceeds_3um,10.7187,False,still_exceeds_3um,10.6473,False,still_exceeds_3um,both_failed,both_failed
+4000032,5000042,3,4,1.8617,2.6013,True,none_successful,2.427,True,none_successful,2.605,True,none_successful,both_successful,both_successful
+5000038,6000046,4,5,3.3004,6.9182,False,still_exceeds_3um,7.3824,False,still_exceeds_3um,7.2098,False,still_exceeds_3um,both_failed,both_failed
+5000040,6000048,4,5,1.7236,6.9062,False,still_exceeds_3um,6.7347,False,still_exceeds_3um,6.6178,False,still_exceeds_3um,both_failed,both_failed
+5000042,6000050,4,5,3.4947,3.7233,False,still_exceeds_3um,4.0517,False,still_exceeds_3um,3.764,False,still_exceeds_3um,both_failed,both_failed
+6000046,7000054,5,6,0.5745,3.1729,False,still_exceeds_3um,3.0432,False,still_exceeds_3um,3.0196,False,still_exceeds_3um,both_failed,both_failed
+6000048,7000056,5,6,3.3746,2.0312,True,none_successful,1.6121,True,none_successful,1.6524,True,none_successful,both_successful,both_successful
+7000054,8000062,6,7,3.2753,0.9084,True,none_successful,1.143,True,none_successful,0.938,True,none_successful,both_successful,both_successful
+7000056,8000064,6,7,3.25,6.5632,False,still_exceeds_3um,5.8299,False,still_exceeds_3um,6.0799,False,still_exceeds_3um,both_failed,both_failed
+8000062,9000072,7,8,0.8125,3.4947,False,still_exceeds_3um,3.5798,False,still_exceeds_3um,3.3782,False,still_exceeds_3um,both_failed,both_failed
+8000064,9000074,7,8,3.3004,6.5632,False,still_exceeds_3um,6.154,False,still_exceeds_3um,6.4437,False,still_exceeds_3um,both_failed,both_failed
+9000079,10000086,8,9,0.5745,2.6013,True,none_successful,2.0692,True,none_successful,2.3211,True,none_successful,both_successful,both_successful

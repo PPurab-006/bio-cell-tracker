@@ -1,0 +1,11 @@
+gt_source_id,gt_target_id,true_distance_um,both_endpoints_detected_r0,both_endpoints_detected_r1,both_endpoints_detected_r2,r0_loc_err_source_um,r0_loc_err_target_um,r1_loc_err_source_um,r1_loc_err_target_um,r2_loc_err_source_um,r2_loc_err_target_um,r0_pred_distance_um,r1_pred_distance_um,r2_pred_distance_um,cross_3um_r0,cross_3um_r1,cross_3um_r2,cross_5um_r0,cross_5um_r1,cross_5um_r2,recovered_in_r1_a1,recovered_in_r1_a3,lost_due_to_gate_rejection,lost_due_to_hungarian_competition,fundamentally_unavailable_missing_endpoint,primary_failure_mechanism
+1000007,2000013,3.3746,1,1,1,2.7252,5.0086,2.2541,5.2836,2.465,5.1148,7.1297,7.04,6.9412,0,0,0,0,0,0,0,0,1,0,0,lost_due_to_large_displacement_gate_rejection
+2000013,3000022,2.0715,1,1,1,5.0086,5.3434,5.2836,5.1671,5.1148,5.3666,7.8879,2.3884,8.0197,0,1,0,0,1,0,1,1,0,0,0,recovered_by_r1_a1
+3000022,4000032,2.1877,1,1,1,5.3434,5.6292,5.1671,5.286,5.3666,5.4104,12.9108,3.7593,11.9387,0,0,0,0,1,0,0,0,0,1,0,lost_due_to_hungarian_competition
+4000028,5000038,8.3256,1,1,1,2.1877,1.8168,2.5871,1.8275,2.4565,1.8106,10.4762,10.7187,10.6473,0,0,0,0,0,0,0,0,1,0,0,lost_due_to_large_displacement_gate_rejection
+4000030,5000040,3.4471,1,1,1,0.8125,2.9575,0.9267,2.9709,0.8466,2.953,3.9177,3.8364,3.9971,0,0,0,1,1,1,0,0,0,1,0,lost_due_to_hungarian_competition
+5000038,6000046,3.3004,1,1,1,1.8168,3.35,1.8275,3.5917,1.8106,3.5056,6.9182,7.3824,7.2098,0,0,0,0,0,0,0,0,1,0,0,lost_due_to_large_displacement_gate_rejection
+5000040,6000048,1.7236,1,1,1,2.9575,2.6013,2.9709,2.2699,2.953,2.3026,2.3688,2.5622,2.3676,1,1,1,1,1,1,0,0,0,1,0,lost_due_to_hungarian_competition
+7000056,8000064,3.25,1,1,1,1.9902,2.3337,1.6617,2.0704,1.6967,2.2553,6.5632,5.8299,6.0799,0,0,0,0,0,0,0,0,1,0,0,lost_due_to_axial_displacement_exceeding_gate
+8000062,9000072,0.8125,1,1,1,2.7252,2.6013,2.9595,2.5736,2.7763,2.5829,3.4947,3.5798,3.3782,0,0,0,1,1,1,0,0,0,1,0,lost_due_to_hungarian_competition
+9000077,10000084,3.3004,0,1,0,,5.6875,6.8988,5.5796,,5.6201,,3.7258,,0,0,0,0,1,0,0,1,0,0,0,recovered_by_r1_a3
