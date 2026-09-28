@@ -1,0 +1,10 @@
+split,detector,method_id,theta_um,sequences,total_gt_nodes,total_gt_edges,total_pred_nodes,total_pred_edges,edge_tp,edge_fp,edge_fn,edge_precision,edge_recall,edge_f1,edge_jaccard,fail_endpoint_det,fail_gate_rejection,fail_competition,successful_recovery
+held_out_val,Classical_DoG,Augmented_Hungarian_Theta5.0,5.0,12,76,59,68,34,9,4,50,0.6923,0.1525,0.25,0.1429,45,5,0,9
+held_out_val,Classical_DoG,Baseline_Hungarian,5.0,12,76,59,68,34,9,4,50,0.6923,0.1525,0.25,0.1429,45,5,0,9
+held_out_val,Classical_DoG,Selective_Theta4.0,4.0,12,76,59,68,32,9,4,50,0.6923,0.1525,0.25,0.1429,45,5,0,9
+held_out_val,Learned_UNet_N0,Augmented_Hungarian_Theta5.0,5.0,12,76,59,594,302,41,13,18,0.7593,0.6949,0.7257,0.5694,6,11,1,41
+held_out_val,Learned_UNet_N0,Baseline_Hungarian,5.0,12,76,59,594,289,40,14,19,0.7407,0.678,0.708,0.5479,6,11,2,40
+held_out_val,Learned_UNet_N0,Selective_Theta4.0,4.0,12,76,59,594,268,39,9,20,0.8125,0.661,0.729,0.5735,6,11,3,39
+held_out_val,Learned_UNet_N1,Augmented_Hungarian_Theta5.0,5.0,12,76,59,560,281,27,15,32,0.6429,0.4576,0.5347,0.3649,18,14,0,27
+held_out_val,Learned_UNet_N1,Baseline_Hungarian,5.0,12,76,59,560,272,26,16,33,0.619,0.4407,0.5149,0.3467,18,14,1,26
+held_out_val,Learned_UNet_N1,Selective_Theta4.0,4.0,12,76,59,560,261,27,15,32,0.6429,0.4576,0.5347,0.3649,18,14,0,27

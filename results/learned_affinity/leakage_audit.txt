@@ -1,0 +1,48 @@
+================================================================================
+CRITICAL LEAKAGE AUDIT REPORT: MILESTONE 5B
+================================================================================
+
+The following checks verify that no prohibited information enters model training
+or inference features:
+
+1. GT Node IDs as features:
+   - Status: PASS
+   - Details: Verified that GT node IDs are strictly excluded from feature sets.
+
+2. GT Edge IDs as features:
+   - Status: PASS
+   - Details: Verified that GT edge IDs are strictly excluded from feature sets.
+
+3. GT Coordinates as features:
+   - Status: PASS
+   - Details: Verified that GT coordinates are never used; features use exclusively
+              physical coordinates from frozen D2+R1 detections.
+
+4. GT Matching Distances as features:
+   - Status: PASS
+   - Details: Official node matching cutoff (7.0 um) is evaluated post-hoc; zero
+              matching distance information enters candidate features.
+
+5. GT Correctness Labels in Inference:
+   - Status: PASS
+   - Details: Labels (TRUE_EDGE vs non-TRUE_EDGE) are used strictly as training targets y.
+              Inference feature matrix X contains zero ground truth labels.
+
+6. Future Observations / Lookahead in Temporal Features:
+   - Status: PASS
+   - Details: Track history features only include past detections at frame <= t.
+              Target frame t+1 is never accessed for temporal trajectory history.
+
+7. Validation Transition Statistics Leakage:
+   - Status: PASS
+   - Details: Training transitions are strictly 0->1 through 4->5.
+              Validation transitions 5->6 through 8->9 are completely held out.
+
+8. Full-Dataset Normalization Leakage:
+   - Status: PASS
+   - Details: StandardScaler is fit EXCLUSIVELY on training transitions (frames 0 to 5).
+              Validation and inference data are transformed using the frozen training scaler.
+
+================================================================================
+OVERALL LEAKAGE AUDIT RESULT: ALL 8 CHECKS PASSED (100% CLEAN)
+================================================================================

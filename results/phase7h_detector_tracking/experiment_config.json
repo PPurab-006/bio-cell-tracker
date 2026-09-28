@@ -1,0 +1,32 @@
+{
+  "experiment": "Phase 7H: Controlled Patch-Level Detector-to-Tracker Integration",
+  "date": "2026-09-28",
+  "random_seed": 42,
+  "device": "cuda",
+  "sequence_counts": {
+    "train": 10,
+    "inner_val": 20,
+    "held_out_val": 12,
+    "total": 42
+  },
+  "frames_per_sequence": 5,
+  "association_gates_um": [
+    3.0,
+    5.0
+  ],
+  "detector_threshold": 0.3,
+  "nms_footprint_voxels": [
+    2,
+    6,
+    6
+  ],
+  "checkpoint_hashes": {
+    "best_checkpoint_F1_N0.pt": "45024020082f95dac1318a953365e7e1264f14ee2b597580c5b4a5191cb68e37",
+    "best_checkpoint_F1_N1.pt": "fc61b5d6d571f5d0435666c5164690f33e4600bb8b3f6478b2afa62b48852128"
+  },
+  "voxel_scale_um": {
+    "scale_z": 1.625,
+    "scale_y": 0.40625,
+    "scale_x": 0.40625
+  }
+}

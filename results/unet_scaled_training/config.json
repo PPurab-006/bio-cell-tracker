@@ -1,0 +1,78 @@
+{
+  "experiment": "Phase 7F Scaled Multi-Patch Training with Calibrated Output Initialization",
+  "random_seed": 42,
+  "device": "cuda",
+  "steps": 430,
+  "batch_size": 4,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "patch_counts": {
+    "train": 86,
+    "inner_val": 20,
+    "held_out_val": 12,
+    "total": 118
+  },
+  "best_steps": {
+    "variant_F1": 300,
+    "variant_F2": 380,
+    "variant_F3": 320
+  },
+  "best_val_losses": {
+    "variant_F1": 0.12322675436735153,
+    "variant_F2": 0.10843370854854584,
+    "variant_F3": 0.12222401052713394
+  },
+  "checkpoint_hashes": {
+    "best_variant_F1": "8e770e9f42d3c39cbc2f04874c4c6f1e82d9a2a1f8aa77a1e88ef5b6804bdc71",
+    "final_variant_F1": "3aa1b91f7c8745a5fe646afb0c7608819c45bf7c9e1cb60a40924fcb791012c6",
+    "best_variant_F2": "79a762fd1433b6012ed2fc78521c1a236e7651ffe4e434ec4fcc689b2c66ab74",
+    "final_variant_F2": "eb22d91c43bdd2ea2dc7c47be344af6758c2d033691d6bef3cd67a9931f9672d",
+    "best_variant_F3": "a851f321177398bee5e25b7a995d5b1efbdabd41ea22d24177429041c7ebd7b0",
+    "final_variant_F3": "c635b3ca58d951869a9f968f77b44c3f11b796dc61712807980fbff871ffad7a"
+  },
+  "split_integrity": {
+    "status": "PASSED",
+    "train_samples": [
+      "44b6_d29c9ab2",
+      "6bba_bb9f20c3"
+    ],
+    "val_samples": [
+      "44b6_d29c9ab2",
+      "6bba_bb9f20c3"
+    ],
+    "held_out_samples": [
+      "6bba_43fea39d"
+    ],
+    "held_out_sample_strictly_quarantined": true,
+    "max_train_t": 55,
+    "min_inner_val_t": 70,
+    "temporal_buffer_frames": 15,
+    "spatial_overlap_violations": 0,
+    "total_train_patches": 86,
+    "total_inner_val_patches": 20,
+    "total_held_out_patches": 12
+  },
+  "variants": [
+    {
+      "id": "variant_F1",
+      "name": "Variant F1: Calibrated Head (-4.0) + Batch-Pooled Masked L1",
+      "final_bias_init": -4.0,
+      "loss_fn": "masked_l1_loss",
+      "description": "Scaled D1 variant: final layer bias initialized to -4.0, batch-pooled masked L1."
+    },
+    {
+      "id": "variant_F2",
+      "name": "Variant F2: Default Head (0.0) + Per-Patch Normalized Masked L1",
+      "final_bias_init": null,
+      "loss_fn": "per_patch_masked_l1_loss",
+      "description": "Scaled B variant: default linear bias, per-patch-normalized masked L1."
+    },
+    {
+      "id": "variant_F3",
+      "name": "Variant F3: Calibrated Head (-4.0) + Per-Patch Normalized Masked L1",
+      "final_bias_init": -4.0,
+      "loss_fn": "per_patch_masked_l1_loss",
+      "description": "Combined variant: calibrated bias (-4.0) combined with per-patch loss normalization."
+    }
+  ]
+}

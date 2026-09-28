@@ -1,0 +1,23 @@
+{
+  "mode": "learned",
+  "feature_cols": [
+    "distance_um",
+    "distance_margin_um",
+    "distance_ratio_to_second",
+    "target_rank_by_distance",
+    "abs_dz_um",
+    "dxy_um",
+    "source_dog_score",
+    "target_dog_score",
+    "score_difference",
+    "source_candidate_count_5um",
+    "source_neighbor_count_5um",
+    "track_history_length",
+    "target_refinement_shift_3d"
+  ],
+  "lambda_dist": 0.5,
+  "candidate_radius_um": 5.0,
+  "invalid_cost": 1000000.0,
+  "epsilon": 1e-06,
+  "dataset_name": "t101"
+}

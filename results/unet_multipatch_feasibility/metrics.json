@@ -1,0 +1,49 @@
+{
+  "random_seed": 42,
+  "device": "cuda",
+  "total_patches": 36,
+  "train_patches": 20,
+  "inner_val_patches": 10,
+  "held_out_patches": 6,
+  "training_steps": 200,
+  "batch_size": 4,
+  "initial_train_loss": 0.17888502776622772,
+  "final_train_loss": 0.050753,
+  "train_loss_reduction_pct": 71.63,
+  "initial_val_loss": 0.1773361712694168,
+  "final_val_loss": 0.127477,
+  "best_val_loss": 0.115791,
+  "checkpoint_hashes": {
+    "best_checkpoint": "83532d3c5312ee4474ab039d6868de2ae3e9c0634631ab71ce039f28172a0a73",
+    "final_checkpoint": "0b77a8ae76707b1061f345040fcb20b1e2eaa015749446ad2883196adc27a280"
+  },
+  "performance_by_split": {
+    "train": {
+      "gt_centroids": 35,
+      "cov_1_0um": 0.9083,
+      "cov_2_0um": 0.9583,
+      "cov_3_0um": 0.9583,
+      "mean_peaks_per_patch": 74.1
+    },
+    "inner_val": {
+      "gt_centroids": 15,
+      "cov_1_0um": 0.47,
+      "cov_2_0um": 0.54,
+      "cov_3_0um": 0.59,
+      "mean_peaks_per_patch": 81.0
+    },
+    "held_out_val": {
+      "gt_centroids": 9,
+      "cov_1_0um": 0.2083,
+      "cov_2_0um": 0.25,
+      "cov_3_0um": 0.25,
+      "mean_peaks_per_patch": 71.5
+    }
+  },
+  "classical_dog_comparison": {
+    "train_cov_2_0um": 0.3333,
+    "inner_val_cov_2_0um": 0.59,
+    "held_out_cov_2_0um": 0.25,
+    "mean_dog_peaks_per_patch": 3.8
+  }
+}

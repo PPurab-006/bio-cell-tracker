@@ -1,0 +1,56 @@
+{
+  "milestone": "5B",
+  "description": "Learned Pairwise Association Tracker Experiments",
+  "model_type": "LogisticRegression",
+  "hyperparameters": {
+    "class_weight": "balanced",
+    "max_iter": 1000,
+    "random_state": 42
+  },
+  "training_transitions": [
+    "0->1",
+    "1->2",
+    "2->3",
+    "3->4",
+    "4->5"
+  ],
+  "validation_transitions": [
+    "5->6",
+    "6->7",
+    "7->8",
+    "8->9"
+  ],
+  "candidate_gate_um": 5.0,
+  "lambda_values": [
+    0.1,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "multimodal_features": [
+    "distance_um",
+    "distance_margin_um",
+    "distance_ratio_to_second",
+    "target_rank_by_distance",
+    "abs_dz_um",
+    "dxy_um",
+    "source_dog_score",
+    "target_dog_score",
+    "score_difference",
+    "source_candidate_count_5um",
+    "source_neighbor_count_5um",
+    "track_history_length",
+    "target_refinement_shift_3d"
+  ],
+  "appearance_features": [
+    "source_dog_score",
+    "target_dog_score",
+    "source_score_ratio",
+    "target_score_ratio",
+    "score_difference",
+    "score_ratio_target_source"
+  ],
+  "cost_transformation": "cost = -log(P(TRUE_EDGE) + 1e-6) + lambda * (distance_um / 5.0)",
+  "invalid_cost": 1000000.0,
+  "epsilon": 1e-06
+}

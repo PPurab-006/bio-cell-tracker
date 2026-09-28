@@ -1,0 +1,169 @@
+{
+  "dataset_audit": {
+    "audit_timestamp": "2026-09-26 22:36:42",
+    "total_directories_scanned": 1,
+    "usable_sequences_count": 1,
+    "usable_sequence_ids": [
+      "t101"
+    ],
+    "multiple_independent_sequences_available": false,
+    "protocol_decision": "Within-Sequence Temporal Robustness & Extended Horizon Analysis",
+    "reasoning": "Found 1 usable sequences: ['t101']. Only 1 annotated sequence exists locally. Under Milestone 5D protocol, we must not claim cross-sequence generalization. We conduct an honest, rigorous within-sequence temporal robustness analysis across benchmark, extended holdout, and continuous partitions.",
+    "sequences": [
+      {
+        "sequence_id": "t101",
+        "path": "data/samples/t101",
+        "has_zarr": true,
+        "has_geff": true,
+        "is_usable": true,
+        "spatial_shape": [
+          64,
+          256,
+          256
+        ],
+        "voxel_scale": {
+          "scale_z": 1.625,
+          "scale_y": 0.40625,
+          "scale_x": 0.40625
+        },
+        "available_frames_on_disk": 20,
+        "available_frame_indices": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19
+        ],
+        "total_geff_nodes": 654,
+        "total_geff_edges": 626,
+        "annotated_frame_range": [
+          0,
+          99
+        ]
+      }
+    ]
+  },
+  "aggregate_metrics": {
+    "macro_averages": {
+      "Distance_Baseline": {
+        "macro_adjusted_edge_jaccard": 0.1753,
+        "macro_f1": 0.2859,
+        "macro_precision": 0.3201,
+        "macro_recall": 0.2608
+      },
+      "Learned_Selective_C0.50": {
+        "macro_adjusted_edge_jaccard": 0.1629,
+        "macro_f1": 0.2654,
+        "macro_precision": 0.3182,
+        "macro_recall": 0.2281
+      },
+      "Hybrid_Selective_L0.10_C0.50": {
+        "macro_adjusted_edge_jaccard": 0.1672,
+        "macro_f1": 0.271,
+        "macro_precision": 0.3346,
+        "macro_recall": 0.2281
+      },
+      "Learned_Forced_Matching": {
+        "macro_adjusted_edge_jaccard": 0.1414,
+        "macro_f1": 0.2379,
+        "macro_precision": 0.2534,
+        "macro_recall": 0.2281
+      }
+    },
+    "pooled_metrics": {
+      "Distance_Baseline": {
+        "total_predicted_edges": 1513,
+        "total_gt_edges": 62,
+        "total_tp": 15,
+        "total_fp": 31,
+        "total_fn": 47,
+        "pooled_edge_jaccard": 0.1613,
+        "pooled_precision": 0.3261,
+        "pooled_recall": 0.2419,
+        "pooled_f1": 0.2778
+      },
+      "Learned_Selective_C0.50": {
+        "total_predicted_edges": 460,
+        "total_gt_edges": 62,
+        "total_tp": 13,
+        "total_fp": 29,
+        "total_fn": 49,
+        "pooled_edge_jaccard": 0.1429,
+        "pooled_precision": 0.3095,
+        "pooled_recall": 0.2097,
+        "pooled_f1": 0.25
+      },
+      "Hybrid_Selective_L0.10_C0.50": {
+        "total_predicted_edges": 436,
+        "total_gt_edges": 62,
+        "total_tp": 13,
+        "total_fp": 27,
+        "total_fn": 49,
+        "pooled_edge_jaccard": 0.1461,
+        "pooled_precision": 0.325,
+        "pooled_recall": 0.2097,
+        "pooled_f1": 0.2549
+      },
+      "Learned_Forced_Matching": {
+        "total_predicted_edges": 1807,
+        "total_gt_edges": 62,
+        "total_tp": 13,
+        "total_fp": 36,
+        "total_fn": 49,
+        "pooled_edge_jaccard": 0.1327,
+        "pooled_precision": 0.2653,
+        "pooled_recall": 0.2097,
+        "pooled_f1": 0.2342
+      }
+    },
+    "method_comparisons": {
+      "Distance_Baseline": {
+        "delta_macro_jaccard_vs_baseline": 0.0,
+        "pct_change_macro_jaccard": 0.0,
+        "delta_pooled_jaccard_vs_baseline": 0.0,
+        "pct_change_pooled_jaccard": 0.0
+      },
+      "Learned_Selective_C0.50": {
+        "delta_macro_jaccard_vs_baseline": -0.0124,
+        "pct_change_macro_jaccard": -7.07,
+        "delta_pooled_jaccard_vs_baseline": -0.0184,
+        "pct_change_pooled_jaccard": -11.41
+      },
+      "Hybrid_Selective_L0.10_C0.50": {
+        "delta_macro_jaccard_vs_baseline": -0.0081,
+        "pct_change_macro_jaccard": -4.62,
+        "delta_pooled_jaccard_vs_baseline": -0.0152,
+        "pct_change_pooled_jaccard": -9.42
+      },
+      "Learned_Forced_Matching": {
+        "delta_macro_jaccard_vs_baseline": -0.0339,
+        "pct_change_macro_jaccard": -19.34,
+        "delta_pooled_jaccard_vs_baseline": -0.0286,
+        "pct_change_pooled_jaccard": -17.73
+      }
+    }
+  },
+  "config": {
+    "candidate_gate_um": 5.0,
+    "eval_cutoff_um": 7.0,
+    "selective_unmatched_cost": 0.5,
+    "hybrid_lambda_dist": 0.1,
+    "forced_unmatched_cost": 100000.0,
+    "evaluated_frames": 20
+  }
+}

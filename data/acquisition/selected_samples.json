@@ -1,0 +1,35 @@
+{
+  "6bba_43fea39d": {
+    "sample_id": "6bba_43fea39d",
+    "files": 123,
+    "bytes": 317122456,
+    "zarr_files": 102,
+    "zarr_bytes": 317108747,
+    "geff_files": 21,
+    "geff_bytes": 13709,
+    "series": "6bba",
+    "rationale": "Smallest total Zarr size in the competition (0.2953 GiB), highly manageable footprint with complete 100-frame time series and 21 GEFF files."
+  },
+  "6bba_bb9f20c3": {
+    "sample_id": "6bba_bb9f20c3",
+    "files": 123,
+    "bytes": 403421222,
+    "zarr_files": 102,
+    "zarr_bytes": 403401162,
+    "geff_files": 21,
+    "geff_bytes": 20060,
+    "series": "6bba",
+    "rationale": "Highest annotation payload in the competition (20,060 bytes in GEFF), maximum biological label density in the 6bba series."
+  },
+  "44b6_d29c9ab2": {
+    "sample_id": "44b6_d29c9ab2",
+    "files": 123,
+    "bytes": 492828733,
+    "zarr_files": 102,
+    "zarr_bytes": 492813035,
+    "geff_files": 21,
+    "geff_bytes": 15698,
+    "series": "44b6",
+    "rationale": "Cross-embryo biological diversity from the distinct 44b6 series with the highest GEFF annotation payload (15,698 bytes) in that series."
+  }
+}

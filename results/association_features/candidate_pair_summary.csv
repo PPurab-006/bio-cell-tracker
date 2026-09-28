@@ -1,0 +1,11 @@
+transition,source_frame,target_frame,total_candidates,positive_candidates,negative_candidates,positive_fraction,true_edge_count,wrong_target_count,unmatched_target_count,unmatched_source_count,ambiguous_count
+0->1,0,1,187,1,186,0.0053,1,0,2,0,184
+1->2,1,2,263,1,262,0.0038,1,0,0,1,261
+2->3,2,3,240,2,238,0.0083,2,0,1,2,235
+3->4,3,4,202,2,200,0.0099,2,0,1,5,194
+4->5,4,5,200,2,198,0.01,2,0,5,3,190
+5->6,5,6,217,1,216,0.0046,1,0,2,4,210
+6->7,6,7,190,1,189,0.0053,1,0,0,2,187
+7->8,7,8,219,4,215,0.0183,4,0,2,1,212
+8->9,8,9,197,3,194,0.0152,3,0,2,2,190
+ALL_TRANSITIONS,-1,-1,1915,17,1898,0.0089,17,0,15,20,1863

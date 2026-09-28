@@ -1,0 +1,640 @@
+{
+  "sigmas_tested": [
+    1.0,
+    1.5,
+    2.0,
+    2.5
+  ],
+  "patches": {
+    "patch_1_isolated_6bba_43fe": {
+      "definition": {
+        "patch_id": "patch_1_isolated_6bba_43fe",
+        "category": "isolated_annotated_cell",
+        "sample_id": "6bba_43fea39d",
+        "t": 0,
+        "patch_origin": [
+          4,
+          133,
+          29
+        ],
+        "patch_shape": [
+          32,
+          64,
+          64
+        ],
+        "center_node_id": 1000002,
+        "description": "Single isolated cell at (19, 165, 61) with nearest annotated neighbor >25 um away."
+      },
+      "raw_min": 15,
+      "raw_max": 774,
+      "raw_mean": 137.2,
+      "sigma_diagnostics": {
+        "1.0": {
+          "sigma_voxels": [
+            0.615,
+            2.462,
+            2.462
+          ],
+          "num_included_nodes": 1,
+          "num_boundary_nodes": 0,
+          "num_external_bleeding_nodes": 0,
+          "num_excluded_nodes": 6,
+          "peak_value": 1.0,
+          "mean_value": 0.000446,
+          "nonzero_voxel_fraction": 0.003197,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        },
+        "1.5": {
+          "sigma_voxels": [
+            0.923,
+            3.692,
+            3.692
+          ],
+          "num_included_nodes": 1,
+          "num_boundary_nodes": 0,
+          "num_external_bleeding_nodes": 0,
+          "num_excluded_nodes": 6,
+          "peak_value": 1.0,
+          "mean_value": 0.001502,
+          "nonzero_voxel_fraction": 0.01133,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        },
+        "2.0": {
+          "sigma_voxels": [
+            1.231,
+            4.923,
+            4.923
+          ],
+          "num_included_nodes": 1,
+          "num_boundary_nodes": 0,
+          "num_external_bleeding_nodes": 0,
+          "num_excluded_nodes": 6,
+          "peak_value": 1.0,
+          "mean_value": 0.003561,
+          "nonzero_voxel_fraction": 0.026604,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        },
+        "2.5": {
+          "sigma_voxels": [
+            1.538,
+            6.154,
+            6.154
+          ],
+          "num_included_nodes": 1,
+          "num_boundary_nodes": 0,
+          "num_external_bleeding_nodes": 0,
+          "num_excluded_nodes": 6,
+          "peak_value": 1.0,
+          "mean_value": 0.006954,
+          "nonzero_voxel_fraction": 0.051979,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        }
+      }
+    },
+    "patch_2_crowded_6bba_bb9f": {
+      "definition": {
+        "patch_id": "patch_2_crowded_6bba_bb9f",
+        "category": "crowded_neighborhood",
+        "sample_id": "6bba_bb9f20c3",
+        "t": 50,
+        "patch_origin": [
+          4,
+          137,
+          57
+        ],
+        "patch_shape": [
+          32,
+          64,
+          64
+        ],
+        "center_node_id": 51001364,
+        "description": "Crowded cluster containing 2 annotated cells: (11, 141, 113) and (20, 169, 87)."
+      },
+      "raw_min": 60,
+      "raw_max": 1661,
+      "raw_mean": 333.55,
+      "sigma_diagnostics": {
+        "1.0": {
+          "sigma_voxels": [
+            0.615,
+            2.462,
+            2.462
+          ],
+          "num_included_nodes": 2,
+          "num_boundary_nodes": 1,
+          "num_external_bleeding_nodes": 4,
+          "num_excluded_nodes": 19,
+          "peak_value": 1.0,
+          "mean_value": 0.001131,
+          "nonzero_voxel_fraction": 0.009186,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        },
+        "1.5": {
+          "sigma_voxels": [
+            0.923,
+            3.692,
+            3.692
+          ],
+          "num_included_nodes": 2,
+          "num_boundary_nodes": 1,
+          "num_external_bleeding_nodes": 5,
+          "num_excluded_nodes": 18,
+          "peak_value": 1.0,
+          "mean_value": 0.004198,
+          "nonzero_voxel_fraction": 0.03392,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        },
+        "2.0": {
+          "sigma_voxels": [
+            1.231,
+            4.923,
+            4.923
+          ],
+          "num_included_nodes": 2,
+          "num_boundary_nodes": 1,
+          "num_external_bleeding_nodes": 6,
+          "num_excluded_nodes": 17,
+          "peak_value": 1.0,
+          "mean_value": 0.01036,
+          "nonzero_voxel_fraction": 0.080147,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        },
+        "2.5": {
+          "sigma_voxels": [
+            1.538,
+            6.154,
+            6.154
+          ],
+          "num_included_nodes": 2,
+          "num_boundary_nodes": 1,
+          "num_external_bleeding_nodes": 7,
+          "num_excluded_nodes": 16,
+          "peak_value": 1.0,
+          "mean_value": 0.020595,
+          "nonzero_voxel_fraction": 0.157471,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        }
+      }
+    },
+    "patch_3_boundary_z_6bba_43fe": {
+      "definition": {
+        "patch_id": "patch_3_boundary_z_6bba_43fe",
+        "category": "cell_near_z_boundary",
+        "sample_id": "6bba_43fea39d",
+        "t": 50,
+        "patch_origin": [
+          0,
+          92,
+          10
+        ],
+        "patch_shape": [
+          32,
+          64,
+          64
+        ],
+        "center_node_id": 51000456,
+        "description": "Cell located at extreme axial edge z=2 (plane 2 of 64), testing Z-boundary truncation."
+      },
+      "raw_min": 7,
+      "raw_max": 300,
+      "raw_mean": 42.23,
+      "sigma_diagnostics": {
+        "1.0": {
+          "sigma_voxels": [
+            0.615,
+            2.462,
+            2.462
+          ],
+          "num_included_nodes": 0,
+          "num_boundary_nodes": 0,
+          "num_external_bleeding_nodes": 1,
+          "num_excluded_nodes": 7,
+          "peak_value": 0.4758,
+          "mean_value": 6.8e-05,
+          "nonzero_voxel_fraction": 0.000847,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        },
+        "1.5": {
+          "sigma_voxels": [
+            0.923,
+            3.692,
+            3.692
+          ],
+          "num_included_nodes": 0,
+          "num_boundary_nodes": 0,
+          "num_external_bleeding_nodes": 2,
+          "num_excluded_nodes": 6,
+          "peak_value": 0.7189,
+          "mean_value": 0.000374,
+          "nonzero_voxel_fraction": 0.003891,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        },
+        "2.0": {
+          "sigma_voxels": [
+            1.231,
+            4.923,
+            4.923
+          ],
+          "num_included_nodes": 0,
+          "num_boundary_nodes": 0,
+          "num_external_bleeding_nodes": 2,
+          "num_excluded_nodes": 6,
+          "peak_value": 0.8305,
+          "mean_value": 0.001138,
+          "nonzero_voxel_fraction": 0.011658,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        },
+        "2.5": {
+          "sigma_voxels": [
+            1.538,
+            6.154,
+            6.154
+          ],
+          "num_included_nodes": 0,
+          "num_boundary_nodes": 0,
+          "num_external_bleeding_nodes": 2,
+          "num_excluded_nodes": 6,
+          "peak_value": 0.888,
+          "mean_value": 0.002668,
+          "nonzero_voxel_fraction": 0.027084,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        }
+      }
+    },
+    "patch_4_boundary_lateral_44b6_d29c": {
+      "definition": {
+        "patch_id": "patch_4_boundary_lateral_44b6_d29c",
+        "category": "cell_near_lateral_boundary",
+        "sample_id": "44b6_d29c9ab2",
+        "t": 0,
+        "patch_origin": [
+          10,
+          0,
+          150
+        ],
+        "patch_shape": [
+          32,
+          64,
+          64
+        ],
+        "center_node_id": 1000001,
+        "description": "Cell located at lateral edge y=2, testing lateral boundary behavior."
+      },
+      "raw_min": 57,
+      "raw_max": 2210,
+      "raw_mean": 423.29,
+      "sigma_diagnostics": {
+        "1.0": {
+          "sigma_voxels": [
+            0.615,
+            2.462,
+            2.462
+          ],
+          "num_included_nodes": 0,
+          "num_boundary_nodes": 0,
+          "num_external_bleeding_nodes": 2,
+          "num_excluded_nodes": 9,
+          "peak_value": 0.4758,
+          "mean_value": 5.5e-05,
+          "nonzero_voxel_fraction": 0.000603,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        },
+        "1.5": {
+          "sigma_voxels": [
+            0.923,
+            3.692,
+            3.692
+          ],
+          "num_included_nodes": 0,
+          "num_boundary_nodes": 0,
+          "num_external_bleeding_nodes": 2,
+          "num_excluded_nodes": 9,
+          "peak_value": 0.7189,
+          "mean_value": 0.00025,
+          "nonzero_voxel_fraction": 0.002106,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        },
+        "2.0": {
+          "sigma_voxels": [
+            1.231,
+            4.923,
+            4.923
+          ],
+          "num_included_nodes": 0,
+          "num_boundary_nodes": 0,
+          "num_external_bleeding_nodes": 2,
+          "num_excluded_nodes": 9,
+          "peak_value": 0.8305,
+          "mean_value": 0.000658,
+          "nonzero_voxel_fraction": 0.005653,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        },
+        "2.5": {
+          "sigma_voxels": [
+            1.538,
+            6.154,
+            6.154
+          ],
+          "num_included_nodes": 0,
+          "num_boundary_nodes": 0,
+          "num_external_bleeding_nodes": 3,
+          "num_excluded_nodes": 8,
+          "peak_value": 0.888,
+          "mean_value": 0.001391,
+          "nonzero_voxel_fraction": 0.01226,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        }
+      }
+    },
+    "patch_5_empty_tissue_6bba_43fe": {
+      "definition": {
+        "patch_id": "patch_5_empty_tissue_6bba_43fe",
+        "category": "no_annotated_cells_tissue",
+        "sample_id": "6bba_43fea39d",
+        "t": 50,
+        "patch_origin": [
+          16,
+          20,
+          100
+        ],
+        "patch_shape": [
+          32,
+          64,
+          64
+        ],
+        "center_node_id": null,
+        "description": "Patch inside tissue containing visible autofluorescence but 0 ground-truth annotations."
+      },
+      "raw_min": 3,
+      "raw_max": 55,
+      "raw_mean": 23.26,
+      "sigma_diagnostics": {
+        "1.0": {
+          "sigma_voxels": [
+            0.615,
+            2.462,
+            2.462
+          ],
+          "num_included_nodes": 0,
+          "num_boundary_nodes": 0,
+          "num_external_bleeding_nodes": 0,
+          "num_excluded_nodes": 8,
+          "peak_value": 0.0,
+          "mean_value": 0.0,
+          "nonzero_voxel_fraction": 0.0,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        },
+        "1.5": {
+          "sigma_voxels": [
+            0.923,
+            3.692,
+            3.692
+          ],
+          "num_included_nodes": 0,
+          "num_boundary_nodes": 0,
+          "num_external_bleeding_nodes": 0,
+          "num_excluded_nodes": 8,
+          "peak_value": 0.0,
+          "mean_value": 0.0,
+          "nonzero_voxel_fraction": 0.0,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        },
+        "2.0": {
+          "sigma_voxels": [
+            1.231,
+            4.923,
+            4.923
+          ],
+          "num_included_nodes": 0,
+          "num_boundary_nodes": 0,
+          "num_external_bleeding_nodes": 0,
+          "num_excluded_nodes": 8,
+          "peak_value": 0.0,
+          "mean_value": 0.0,
+          "nonzero_voxel_fraction": 0.0,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        },
+        "2.5": {
+          "sigma_voxels": [
+            1.538,
+            6.154,
+            6.154
+          ],
+          "num_included_nodes": 0,
+          "num_boundary_nodes": 0,
+          "num_external_bleeding_nodes": 0,
+          "num_excluded_nodes": 8,
+          "peak_value": 0.0,
+          "mean_value": 0.0,
+          "nonzero_voxel_fraction": 0.0,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        }
+      }
+    },
+    "patch_6_annotation_gap_44b6_d29c": {
+      "definition": {
+        "patch_id": "patch_6_annotation_gap_44b6_d29c",
+        "category": "large_annotation_gap",
+        "sample_id": "44b6_d29c9ab2",
+        "t": 50,
+        "patch_origin": [
+          16,
+          30,
+          80
+        ],
+        "patch_shape": [
+          32,
+          64,
+          64
+        ],
+        "center_node_id": null,
+        "description": "Region between distant lineages with no annotations within 30 um."
+      },
+      "raw_min": 188,
+      "raw_max": 2576,
+      "raw_mean": 554.37,
+      "sigma_diagnostics": {
+        "1.0": {
+          "sigma_voxels": [
+            0.615,
+            2.462,
+            2.462
+          ],
+          "num_included_nodes": 0,
+          "num_boundary_nodes": 0,
+          "num_external_bleeding_nodes": 0,
+          "num_excluded_nodes": 12,
+          "peak_value": 0.0,
+          "mean_value": 0.0,
+          "nonzero_voxel_fraction": 0.0,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        },
+        "1.5": {
+          "sigma_voxels": [
+            0.923,
+            3.692,
+            3.692
+          ],
+          "num_included_nodes": 0,
+          "num_boundary_nodes": 0,
+          "num_external_bleeding_nodes": 0,
+          "num_excluded_nodes": 12,
+          "peak_value": 0.0,
+          "mean_value": 0.0,
+          "nonzero_voxel_fraction": 0.0,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        },
+        "2.0": {
+          "sigma_voxels": [
+            1.231,
+            4.923,
+            4.923
+          ],
+          "num_included_nodes": 0,
+          "num_boundary_nodes": 0,
+          "num_external_bleeding_nodes": 0,
+          "num_excluded_nodes": 12,
+          "peak_value": 0.0,
+          "mean_value": 0.0,
+          "nonzero_voxel_fraction": 0.0,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        },
+        "2.5": {
+          "sigma_voxels": [
+            1.538,
+            6.154,
+            6.154
+          ],
+          "num_included_nodes": 0,
+          "num_boundary_nodes": 0,
+          "num_external_bleeding_nodes": 0,
+          "num_excluded_nodes": 12,
+          "peak_value": 0.0,
+          "mean_value": 0.0,
+          "nonzero_voxel_fraction": 0.0,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        }
+      }
+    },
+    "patch_7_t101_historical_ref": {
+      "definition": {
+        "patch_id": "patch_7_t101_historical_ref",
+        "category": "historical_benchmark_t101",
+        "sample_id": "t101",
+        "t": 10,
+        "patch_origin": [
+          8,
+          90,
+          80
+        ],
+        "patch_shape": [
+          32,
+          64,
+          64
+        ],
+        "center_node_id": 11000096,
+        "description": "Historical t101 benchmark sample at holdout boundary t=10."
+      },
+      "raw_min": 19,
+      "raw_max": 765,
+      "raw_mean": 90.01,
+      "sigma_diagnostics": {
+        "1.0": {
+          "sigma_voxels": [
+            0.615,
+            2.462,
+            2.462
+          ],
+          "num_included_nodes": 1,
+          "num_boundary_nodes": 0,
+          "num_external_bleeding_nodes": 0,
+          "num_excluded_nodes": 3,
+          "peak_value": 1.0,
+          "mean_value": 0.000446,
+          "nonzero_voxel_fraction": 0.003197,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        },
+        "1.5": {
+          "sigma_voxels": [
+            0.923,
+            3.692,
+            3.692
+          ],
+          "num_included_nodes": 1,
+          "num_boundary_nodes": 0,
+          "num_external_bleeding_nodes": 0,
+          "num_excluded_nodes": 3,
+          "peak_value": 1.0,
+          "mean_value": 0.001502,
+          "nonzero_voxel_fraction": 0.01133,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        },
+        "2.0": {
+          "sigma_voxels": [
+            1.231,
+            4.923,
+            4.923
+          ],
+          "num_included_nodes": 1,
+          "num_boundary_nodes": 0,
+          "num_external_bleeding_nodes": 0,
+          "num_excluded_nodes": 3,
+          "peak_value": 1.0,
+          "mean_value": 0.003561,
+          "nonzero_voxel_fraction": 0.026604,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        },
+        "2.5": {
+          "sigma_voxels": [
+            1.538,
+            6.154,
+            6.154
+          ],
+          "num_included_nodes": 1,
+          "num_boundary_nodes": 0,
+          "num_external_bleeding_nodes": 0,
+          "num_excluded_nodes": 3,
+          "peak_value": 1.0,
+          "mean_value": 0.006934,
+          "nonzero_voxel_fraction": 0.051521,
+          "gaussian_overlap_detected": false,
+          "overlap_max_value": 0.0
+        }
+      }
+    }
+  },
+  "checksum_verification": {
+    "rechecked": true,
+    "total_records_in_manifest": 369,
+    "spot_checks_recalculated": 72,
+    "spot_checks_verified_sha256": 72,
+    "mismatches": 0
+  }
+}

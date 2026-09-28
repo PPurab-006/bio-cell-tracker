@@ -1,0 +1,8 @@
+condition,model_name,scoring_mode,lambda_dist,cost_description,detections,candidate_pairs,tracks,edges,edge_tp,edge_fp,edge_fn,precision,recall,f1,raw_edge_jaccard,adjusted_edge_jaccard
+A,R1_distance_only,distance,0.0,cost = physical distance (R1_A3 baseline),1566,1915,727,839,11,13,16,0.4583,0.4074,0.4314,0.275,0.275
+B,R1_appearance_only,appearance,0.0,cost = -log(P_app) (Appearance-only),1566,1915,554,1012,10,18,17,0.3571,0.3704,0.3636,0.2222,0.2222
+C,R1_full_learned,learned,0.0,cost = -log(P_mm) (Pure Multimodal Affinity),1566,1915,554,1012,10,17,17,0.3704,0.3704,0.3704,0.2273,0.2273
+D,R1_hybrid_lam0.10,hybrid,0.1,cost = -log(P_mm) + 0.10 * (dist / 5.0),1566,1915,554,1012,10,16,17,0.3846,0.3704,0.3774,0.2326,0.2326
+E,R1_hybrid_lam0.25,hybrid,0.25,cost = -log(P_mm) + 0.25 * (dist / 5.0),1566,1915,554,1012,10,16,17,0.3846,0.3704,0.3774,0.2326,0.2326
+F,R1_hybrid_lam0.50,hybrid,0.5,cost = -log(P_mm) + 0.50 * (dist / 5.0),1566,1915,554,1012,10,16,17,0.3846,0.3704,0.3774,0.2326,0.2326
+G,R1_hybrid_lam1.00,hybrid,1.0,cost = -log(P_mm) + 1.00 * (dist / 5.0),1566,1915,554,1012,10,16,17,0.3846,0.3704,0.3774,0.2326,0.2326

@@ -1,0 +1,4 @@
+model,features_used,train_roc_auc,val_roc_auc,train_pr_auc,val_pr_auc
+Distance_Only_Control,distance_um,0.4388,0.6525,0.0073,0.0174
+Logistic_Regression,geometry+appearance+competition+temporal,0.9076,0.8773,0.0412,0.0465
+Decision_Tree_Depth3,geometry+appearance+competition+temporal,0.8948,0.627,0.0339,0.0173

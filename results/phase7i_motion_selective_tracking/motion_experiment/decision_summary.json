@@ -1,0 +1,14 @@
+{
+  "baseline_tp": 90,
+  "baseline_jaccard": 0.8035714285714286,
+  "cond_b_tp": 83,
+  "cond_b_jaccard": 0.7410714285714286,
+  "cond_b_delta_tp": -7,
+  "cond_b_delta_jaccard": -0.0625,
+  "cond_c_tp": 88,
+  "cond_c_jaccard": 0.7857142857142857,
+  "cond_c_delta_tp": -2,
+  "cond_c_delta_jaccard": -0.017857142857142905,
+  "decision_category": "Category 4: Unambiguous Degradation",
+  "recommendation": "REJECT: Motion extrapolation degrades tracking performance."
+}

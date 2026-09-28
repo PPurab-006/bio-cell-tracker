@@ -1,0 +1,53 @@
+{
+  "experiment": "Phase 7E Background Loss Calibration and Formulation",
+  "random_seed": 42,
+  "device": "cuda",
+  "steps": 200,
+  "batch_size": 4,
+  "lr": 0.001,
+  "weight_decay": 0.0001,
+  "checkpoint_hashes": {
+    "best_variant_A_control": "b1ef8a38e08f1bf47164dfa779c47a3f2726b49bb4a4e852087ee6787fd038bf",
+    "final_variant_A_control": "9bec8a9238eda26f7920a0bd2be48bdeb920159956a8e9fa2985903b55327fb8",
+    "best_variant_B_per_patch": "c280dbbaf4e2de3e62d176124c020d402acbf4f4555e6eea695a7c124469570e",
+    "final_variant_B_per_patch": "0b87f97d23e3351217b3fcd0f8224cc453bfdb0e4c676940cf3112ab4195f73e",
+    "best_variant_D1_calibrated_bias": "2443234e203d835d720c3f7f2185269ea98874306afb0b244afde4fbb2516ea2",
+    "final_variant_D1_calibrated_bias": "e5c4f41da7c412e6714663d463e9052aaf01f12ff054f4b01be440069db6c119",
+    "best_variant_D2_tail_calibrated": "147fa463e87706008a8b8d661aa5abf28010479fa3764239706fd83da43397c0",
+    "final_variant_D2_tail_calibrated": "8bd220e22d62a0fdb180b01dc7e6e1af04b2fa5fb1cdfdcc81595c12f0b36351"
+  },
+  "variants": [
+    {
+      "id": "variant_A_control",
+      "name": "Variant A: Control (Phase 7D Batch-Pooled L1)",
+      "final_bias_init": null,
+      "loss_fn": "masked_l1_loss",
+      "target_key": "std",
+      "description": "Reproduction of Phase 7D masked L1 with batch-pooled denominator and default initialization."
+    },
+    {
+      "id": "variant_B_per_patch",
+      "name": "Variant B: Audited Per-Patch Normalization",
+      "final_bias_init": null,
+      "loss_fn": "per_patch_masked_l1_loss",
+      "target_key": "std",
+      "description": "Each patch normalized individually by its positive mask volume; equal weighting across density."
+    },
+    {
+      "id": "variant_D1_calibrated_bias",
+      "name": "Variant D1: Calibrated Logit Bias (-4.0)",
+      "final_bias_init": -4.0,
+      "loss_fn": "masked_l1_loss",
+      "target_key": "std",
+      "description": "Final layer bias initialized to -4.0 (output floor ~0.018); neutral unannotated voxels remain neutral."
+    },
+    {
+      "id": "variant_D2_tail_calibrated",
+      "name": "Variant D2: Zero-Offset Target Rescaling",
+      "final_bias_init": null,
+      "loss_fn": "masked_l1_loss",
+      "target_key": "rescaled",
+      "description": "Target Gaussian smoothly scaled to reach 0.0 at r_pos=2.5 um; eliminates boundary discontinuity."
+    }
+  ]
+}

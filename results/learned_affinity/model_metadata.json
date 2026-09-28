@@ -1,0 +1,16 @@
+{
+  "train_candidates_count": 1092,
+  "train_positives_count": 8,
+  "train_negatives_count": 1084,
+  "val_candidates_count": 823,
+  "val_positives_count": 9,
+  "val_negatives_count": 814,
+  "train_roc_auc": 0.9076,
+  "val_roc_auc": 0.8773,
+  "train_pr_auc": 0.0412,
+  "val_pr_auc": 0.0465,
+  "distance_only_val_roc_auc": 0.6525,
+  "distance_only_val_pr_auc": 0.0174,
+  "appearance_only_val_roc_auc": 0.9219,
+  "appearance_only_val_pr_auc": 0.0689
+}

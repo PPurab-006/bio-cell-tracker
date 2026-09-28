@@ -1,0 +1,59 @@
+{
+  "audit_timestamp": "2026-09-26 22:36:42",
+  "total_directories_scanned": 1,
+  "usable_sequences_count": 1,
+  "usable_sequence_ids": [
+    "t101"
+  ],
+  "multiple_independent_sequences_available": false,
+  "protocol_decision": "Within-Sequence Temporal Robustness & Extended Horizon Analysis",
+  "reasoning": "Found 1 usable sequences: ['t101']. Only 1 annotated sequence exists locally. Under Milestone 5D protocol, we must not claim cross-sequence generalization. We conduct an honest, rigorous within-sequence temporal robustness analysis across benchmark, extended holdout, and continuous partitions.",
+  "sequences": [
+    {
+      "sequence_id": "t101",
+      "path": "data/samples/t101",
+      "has_zarr": true,
+      "has_geff": true,
+      "is_usable": true,
+      "spatial_shape": [
+        64,
+        256,
+        256
+      ],
+      "voxel_scale": {
+        "scale_z": 1.625,
+        "scale_y": 0.40625,
+        "scale_x": 0.40625
+      },
+      "available_frames_on_disk": 20,
+      "available_frame_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "total_geff_nodes": 654,
+      "total_geff_edges": 626,
+      "annotated_frame_range": [
+        0,
+        99
+      ]
+    }
+  ]
+}

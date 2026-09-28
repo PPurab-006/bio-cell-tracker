@@ -1,0 +1,11 @@
+gt_source,gt_target,transition,candidate_exists_5um,true_candidate_dist_um,true_candidate_prob,true_candidate_cost,true_dist_rank,true_learned_rank,closest_comp_dist_um,closest_comp_prob,closest_comp_cost,recovered_baseline_R1_A3,recovered_learned_5B_forced,recovered_learned_selective_C0.50,recovered_hybrid_selective,rejected_under_C0.50,primary_mechanism
+1000007,2000013,0->1,False,,,,,,,,,False,False,False,False,True,Gate Failure: Endpoint distance exceeds 5.0 µm candidate gate
+2000013,3000022,1->2,True,2.3884,0.9403,0.0615,1.0,1.0,,,,True,True,True,True,False,Recovered: Successfully linked in baseline and selective learned
+3000022,4000032,2->3,True,3.7593,0.7998,0.2233,2.0,2.0,3.6006,0.9114,0.0928,False,False,False,False,False,Hungarian Competition: Competing candidate won global assignment
+4000028,5000038,3->4,False,,,,,,,,,False,False,False,False,True,Gate Failure: Endpoint distance exceeds 5.0 µm candidate gate
+4000030,5000040,3->4,True,3.8364,0.6575,0.4193,1.0,1.0,,,,False,True,True,True,False,RECOVERED BY REJECTION: Selective assignment resolved competing Hungarian permutation!
+5000038,6000046,4->5,False,,,,,,,,,False,False,False,False,True,Gate Failure: Endpoint distance exceeds 5.0 µm candidate gate
+5000040,6000048,4->5,True,2.5622,0.7936,0.2312,2.0,2.0,1.2344,0.9445,0.0571,False,False,False,False,False,Hungarian Competition: Competing candidate won global assignment
+7000056,8000064,6->7,False,,,,,,,,,False,False,False,False,True,Gate Failure: Endpoint distance exceeds 5.0 µm candidate gate
+8000062,9000072,7->8,True,3.5798,0.9306,0.072,2.0,1.0,3.3984,0.8034,0.2189,False,False,True,True,False,RECOVERED BY REJECTION: Selective assignment resolved competing Hungarian permutation!
+9000077,10000084,8->9,True,3.7258,0.9648,0.0358,3.0,1.0,3.2815,0.9197,0.0837,True,True,True,True,False,Recovered: Successfully linked in baseline and selective learned

@@ -2944,6 +2944,84 @@ All three conditions were tracked using the exact same Hungarian linear assignme
 - **Continuity Diagnostic**: Full 5-frame track counts reflect algorithmic graph continuity across candidate detections and must not be described as confirmed biological lineages or identity-accurate trajectories.
 - **Addendum Filed**: Formal addendum filed at [`AUDIT_ADDENDUM_2026-09-28.md`](results/phase7h_detector_tracking/AUDIT_ADDENDUM_2026-09-28.md) leaving frozen milestone artifacts unmodified.
 
+---
 
+### 30.6 Phase 7I Pre-Implementation Plan Audit Note (2026-09-28)
+- **Review Status**: PLANNING-ONLY AUDIT COMPLETE & SPECIFICATION LOCKED ([`PLAN_AUDIT_2026-09-28.md`](results/phase7i_motion_selective_tracking/PLAN_AUDIT_2026-09-28.md)).
+- **Key Methodological Corrections**:
+  1. *Two-Dummy Cost Derivation*: Proven that leaving an isolated real pair $(i, j)$ unmatched incurs the sum of two dummy penalties ($c_{\text{track}} + c_{\text{det}}$). To enforce an effective pairwise cutoff $\theta$, dummy penalties must be parameterized as $c_{\text{track}} = c_{\text{det}} = \theta / 2$.
+  2. *Baseline Non-Equivalence*: Proved that an augmented Hungarian matrix with $\theta = 5.0\,\mu\text{m}$ is mathematically distinct from `NearestNeighborTracker(gate=5.0)` because the latter minimizes global costs across unconstrained distances $> 5.0\,\mu\text{m}$ before post-hoc filtering. Pre-registered an explicit equivalence comparison.
+  3. *Competition Failure Definition*: Emphasized that `association_competition` is an evaluator-derived label, not causal biological proof. Competition resolution requires verifying actual GT edge recovery to True Positive.
+  4. *Mutually Exclusive Decision Criteria*: Established 4 exhaustive outcome categories (Category 1: True Tracking Improvement [Adopt]; Category 2: Precision-Driven Pseudo-Gain [Reject]; Category 3: Metric-Neutral Reorganization [Reject]; Category 4: Unambiguous Degradation [Reject]). Crucially, any condition that reduces competition at the cost of lower TP/Jaccard is rejected as Category 4.
+  5. *Quarantine Workflow*: Train split (10 seqs) restricted to sanity/debugging; hyperparameter selection ($\theta$) restricted to inner-val (20 seqs); quarantined held-out sample `6bba_43fea39d` (12 seqs) evaluated strictly once under frozen configuration.
+- **Artifact Status**: Revised specification saved in `results/phase7i_motion_selective_tracking/PLAN_AUDIT_2026-09-28.md`. Frozen Phase 7H artifacts and repository source code remain unmodified.
 
+---
 
+### 30.7 Phase 7I-A Controlled Experiment & Parameter Selection (2026-09-28)
+- **Execution Summary**: Successfully implemented and verified `SelectiveNearestNeighborTracker` (`src/tracking/selective_nearest_neighbor.py`) across 22 passing unit/regression tests. Executed controlled sweep of $\theta \in \{3.0, 3.5, 4.0, 4.5, 5.0\}\,\mu\text{m}$ ($R_{\text{gate}} = 5.0\,\mu\text{m}$) across 30 sequences (10 Train, 20 Inner-Val) with held-out sample `6bba_43fea39d` strictly quarantined.
+- **Key Results on Inner-Validation (Learned U-Net N1, 105 GT Edges)**:
+  - *Baseline Hungarian* ($R_{\text{gate}}=5.0\,\mu\text{m}$): $\text{TP} = 86$, $\text{FP} = 9$, $\text{FN} = 19$, $\text{Recall} = 81.90\%$, $\text{Precision} = 90.53\%$, $\text{Jaccard} = 0.7544$, $\text{Comp Failures} = 6$.
+  - *Selective $\theta = 3.0\,\mu\text{m}$*: $\text{TP} = 70$, $\text{Jaccard} = 0.6306$. Category 4 (Degradation, $\Delta \text{TP} = -16$).
+  - *Selective $\theta = 3.5\,\mu\text{m}$*: $\text{TP} = 85$, $\text{Jaccard} = 0.7589$. Category 2 (Precision-Driven Pseudo-Gain, $\Delta \text{TP} = -1$, rejected).
+  - *Selective $\theta = 4.0\,\mu\text{m}$*: $\text{TP} = \mathbf{90}$, $\text{FP} = \mathbf{7}$, $\text{FN} = \mathbf{15}$, $\text{Recall} = \mathbf{85.71\%}$, $\text{Precision} = \mathbf{92.78\%}$, $\text{Jaccard} = \mathbf{0.8036}$, $\text{Comp Failures} = \mathbf{2}$. **Category 1 (True Tracking Improvement)**.
+  - *Selective $\theta = 4.5\,\mu\text{m}$*: $\text{TP} = 90$, $\text{FP} = 8$, $\text{Jaccard} = 0.7965$. Category 1, but lower Jaccard than $\theta = 4.0\,\mu\text{m}$.
+  - *Augmented Hungarian $\theta = 5.0\,\mu\text{m}$*: $\text{TP} = 91$, $\text{FP} = 9$, $\text{Jaccard} = 0.7982$, $\text{Comp Failures} = 1$. Category 1, but lower Jaccard than $\theta = 4.0\,\mu\text{m}$ due to 2 additional FPs.
+- **Mathematical Non-Equivalence Confirmed**: Augmented Hungarian with $\theta = 5.0\,\mu\text{m}$ recovered 5 additional true positive edges relative to unconstrained baseline Hungarian (91 vs 86) by preventing distant pairings ($> 5.0\,\mu\text{m}$) from distorting local Hungarian competition.
+- **Selected Configuration**: **$\theta^* = 4.0\,\mu\text{m}$ with hard gate $R_{\text{gate}} = 5.0\,\mu\text{m}$**. Achieves $+4$ TP gain, $+0.0492$ Edge Jaccard gain, and drops competition failures from 6 to 2.
+- **Milestone Freeze**: Inner-validation artifacts frozen at [`MILESTONE_FREEZE_INNER_VALIDATION.md`](results/phase7i_motion_selective_tracking/MILESTONE_FREEZE_INNER_VALIDATION.md) and [`REPORT_INNER_VALIDATION.md`](results/phase7i_motion_selective_tracking/REPORT_INNER_VALIDATION.md). Held-out evaluation strictly deferred to Phase 7I-B.
+
+---
+
+### 30.8 Phase 7I-A Quarantined Held-Out Evaluation Results (2026-09-28)
+- **Evaluation Status**: Executed single-pass held-out evaluation on quarantined sample `6bba_43fea39d` (12 sequences, 59 GT edges, 76 GT nodes) under frozen configuration `SelectiveNearestNeighborTracker(theta=4.0, R_gate=5.0)`. Zero threshold tuning, zero model retraining.
+- **Key Results on Held-Out (Learned U-Net N1, 59 GT Edges)**:
+  - *Baseline Hungarian* ($R_{\text{gate}}=5.0\,\mu\text{m}$): $\text{TP} = 26$, $\text{FP} = 16$, $\text{FN} = 33$, $\text{Recall} = 44.07\%$, $\text{Precision} = 61.90\%$, $\text{Jaccard} = 0.3467$, $\text{Comp Failures} = 1$.
+  - *Selective $\theta^* = 4.0\,\mu\text{m}$ (Frozen Selected)*: $\text{TP} = \mathbf{27}$ (+1 gain), $\text{FP} = \mathbf{15}$ (-1 reduction), $\text{FN} = \mathbf{32}$, $\text{Recall} = \mathbf{45.76\%}$, $\text{Precision} = \mathbf{64.29\%}$, $\text{Jaccard} = \mathbf{0.3649}$ (+0.0182 gain), $\text{Comp Failures} = \mathbf{0}$ (**Eliminated**).
+  - *Augmented Hungarian $\theta = 5.0\,\mu\text{m}$*: $\text{TP} = 27$, $\text{FP} = 15$, $\text{FN} = 32$, $\text{Recall} = 45.76\%$, $\text{Precision} = 64.29\%$, $\text{Jaccard} = 0.3649$, $\text{Comp Failures} = 0$.
+- **Ablation Results (Learned U-Net N0, 59 GT Edges)**:
+  - *Baseline Hungarian*: $\text{TP} = 40$, $\text{FP} = 14$, $\text{Jaccard} = 0.5479$.
+  - *Selective $\theta^* = 4.0\,\mu\text{m}$*: $\text{TP} = 39$, $\text{FP} = \mathbf{9}$ (36% FP reduction), $\text{Precision} = \mathbf{81.25\%}$ (vs 74.07%), $\text{Jaccard} = \mathbf{0.5735}$ (+0.0256 gain).
+- **Ablation Results (Classical DoG, 59 GT Edges)**:
+  - *All methods*: $\text{TP} = 9$, $\text{FP} = 4$, $\text{FN} = 50$, $\text{Jaccard} = 0.1429$, $\text{fail\_endpoint\_det} = 45$ (76.3% of GT edges lost to missed detections; 0 competition failures).
+- **Sequence-Level Verification**: In `seq_held_out_val_6bba_t50_p03_crowded`, edge `54000688 -> 55000696` transitioned from `association_competition` in baseline to `successful_recovery` under selective Hungarian, driving the net held-out gain.
+- **Generalization Conclusion**: The selective Hungarian assignment mechanism ($c_{\text{track}} = c_{\text{det}} = \theta/2$) selected on inner validation successfully generalizes to the held-out sample, eliminating association competition and increasing Edge Jaccard without degrading precision.
+- **Artifacts Saved**: All outputs and plots saved in [`results/phase7i_motion_selective_tracking/held_out_evaluation/`](results/phase7i_motion_selective_tracking/held_out_evaluation/). Freeze record filed at [`MILESTONE_FREEZE_HELDOUT.md`](results/phase7i_motion_selective_tracking/held_out_evaluation/MILESTONE_FREEZE_HELDOUT.md).
+
+---
+
+### 30.9 Phase 7I-A Held-Out Evaluation Independent Audit (2026-09-28)
+- **Audit Outcome**: PASS WITH CORRECTIONS ([`AUDIT_REPORT.md`](results/phase7i_motion_selective_tracking/held_out_evaluation/AUDIT_REPORT.md), [`AUDIT_ADDENDUM.md`](results/phase7i_motion_selective_tracking/held_out_evaluation/AUDIT_ADDENDUM.md)).
+- **Exact Recomputation**: Verified 100% numerical match across all 9 conditions (3 detectors × 3 methods) from raw `per_sequence_metrics.csv` and `failure_analysis.csv` records for TP, FP, FN, Precision, Recall, F1, Jaccard, and all failure categories.
+- **Critical Methodological Corrections**:
+  1. *Retraction of "Recoverable Ceiling"*: The claim that 27 represents a "theoretical recoverable ceiling" ($59 - 18 - 14 = 27$) was retracted as circular tautology. Furthermore, per-edge analysis revealed that 12 of the 14 gate rejections had true biological displacements $\le 4.89\,\mu\text{m}$ (down to $0.41\,\mu\text{m}$) and were rejected due to detector localization error jitter, not physical velocity bounds.
+  2. *Interpretation of "Competition Failures"*: Clarified that `association_competition` is an evaluator-derived non-selection label, not biological proof of cell crowding or collision. In the single edge where competition was resolved (`54000688 -> 55000696`), the baseline tracker had simply left the source node unassigned.
+  3. *Sparse Metric Semantics*: Affirmed that precision is evaluated strictly over GT-touching predicted edges ($TP / (TP + FP)$); neutral predicted links between unannotated cells ($N_{\text{pred}} - (TP + FP) \approx 219$) do not penalize precision.
+  4. *Embryo Independence*: Confirmed that shared sample prefix `6bba` prevents claiming cross-embryo biological invariance from this single held-out specimen.
+
+---
+
+### 30.10 Phase 7I-B Controlled Motion-Aware Association Experiment (2026-09-28)
+- **Execution Summary**: Designed, preregistered, unit-tested, and executed the Phase 7I-B controlled motion-aware tracking experiment. Evaluated whether causal velocity extrapolation improves cell association over the frozen static selective nearest-neighbor baseline (`SelectiveNearestNeighborTracker`, $\theta^* = 4.0\,\mu\text{m}$, $R_{\text{gate}} = 5.0\,\mu\text{m}$) after accounting for optical localization jitter and track history length.
+- **Quarantine Compliance**: Held-out sample `6bba_43fea39d` (12 sequences, 59 GT edges) was **strictly quarantined** with zero access or evaluation. All experiments were conducted strictly on the 30 development sequences (10 Train with 85 GT edges, 20 Inner-Val with 105 GT edges).
+- **Pre-Registered Conditions**:
+  - *Condition A (Frozen Baseline)*: `SelectiveNearestNeighborTracker` (static, $\theta = 4.0\,\mu\text{m}$, $R_{\text{gate}} = 5.0\,\mu\text{m}$).
+  - *Condition B (Causal Linear Velocity)*: `CausalMotionSelectiveTracker` ($\alpha = 1.0$, single envelope gate, unregularized negative control).
+  - *Condition C (Causal Damped Velocity)*: `CausalMotionSelectiveTracker` ($\alpha_1=0.0, \alpha_2=0.20, \alpha_{3+}=0.40$, EMA velocity smoothing $\beta=0.5$, dual-envelope gating $\min(d_{\text{stat}}, d_{\text{pred}}) \le 5.0\,\mu\text{m}$).
+  - *Condition D (Ablation Dual-Gate Static)*: `CausalMotionSelectiveTracker` ($\alpha = 0.0$, dual-envelope gate).
+- **Key Results on Inner-Validation (Learned U-Net N1, 105 GT Edges)**:
+  - *Condition A (Frozen Baseline)*: $\text{TP} = \mathbf{90}$, $\text{FP} = \mathbf{7}$, $\text{FN} = \mathbf{15}$, $\text{Recall} = \mathbf{85.71\%}$, $\text{Precision} = \mathbf{92.78\%}$, $\text{Jaccard} = \mathbf{0.8036}$, $\text{Comp Failures} = \mathbf{2}$.
+  - *Condition B (Causal Linear Velocity)*: $\text{TP} = 83$ ($\mathbf{-7\ \text{TPs lost}}$), $\text{FP} = 7$, $\text{FN} = 22$, $\text{Recall} = 79.05\%$, $\text{Precision} = 92.22\%$, $\text{Jaccard} = 0.7411$ ($\mathbf{-0.0625\ \text{drop}}$), $\text{Comp Failures} = 9$ (**quadrupled** from 2 to 9).
+  - *Condition C (Causal Damped Velocity)*: $\text{TP} = 88$ ($\mathbf{-2\ \text{TPs lost}}$), $\text{FP} = 7$, $\text{FN} = 17$, $\text{Recall} = 83.81\%$, $\text{Precision} = 92.63\%$, $\text{Jaccard} = 0.7857$ ($\mathbf{-0.0179\ \text{drop}}$), $\text{Comp Failures} = 4$ (**doubled** from 2 to 4).
+  - *Condition D (Ablation Dual-Gate Static)*: $\text{TP} = 90$, $\text{FP} = 7$, $\text{FN} = 15$, $\text{Jaccard} = 0.8036$, $\text{Comp Failures} = 2$ (numerically identical to Baseline).
+- **History-Stratified Causal Insights (Inner-Val N1)**:
+  - *Stratum $L = 1$ ($t_0 \to t_1$, 28 GT edges)*: All models identically achieved $\text{TP} = 25, \text{Recall} = 89.29\%$ due to strict fallback to static nearest-neighbor, confirming zero lookahead.
+  - *Stratum $L = 2$ ($t_1 \to t_2$, 27 GT edges)*: Linear velocity lost **3 TPs** ($\text{Recall} = 74.07\%$ vs $85.19\%$). History-adaptive damping ($\alpha_2 = 0.20$) successfully saved all 3 edges ($\text{Recall} = 85.19\%$).
+  - *Stratum $L \ge 3$ ($t_2 \to t_4$, 50 GT edges)*: Linear velocity lost **4 TPs** ($\text{Recall} = 76.00\%$ vs $84.00\%$). Even damped velocity ($\alpha = 0.40$) lost **2 TPs** ($\text{Recall} = 80.00\%$) in crowded tissue patches where true cell movement was sub-micron ($0.41\text{--}0.81\,\mu\text{m}$) and velocity extrapolation induced artificial competition with neighbors.
+- **Zero Recovery of Hard Failures**:
+  - Neither Condition B nor Condition C recovered any GT edge that the static baseline missed on Inner Validation (0 recoveries).
+- **Formal Preregistered Decision**:
+  - **Category 4: Unambiguous Degradation** ($\Delta \text{TP} < 0$, $\Delta \text{Jaccard} < 0$).
+  - **REJECT TESTED CAUSAL VELOCITY EXTRAPOLATION MODELS**. Finite-difference single-cell velocity extrapolation compounds high-frequency axial localization noise in this anisotropic imaging regime ($\text{scale}_z = 1.625\,\mu\text{m}, \text{scale}_{xy} = 0.40625\,\mu\text{m}$, cell displacement median $= 1.46\,\mu\text{m}$, $\text{SNR} \approx 0.85\text{--}1.06$), destabilizing global Hungarian assignment. These results do not preclude collective flow or learned spatiotemporal embeddings.
+  - The authoritative project baseline remains **`SelectiveNearestNeighborTracker` ($\theta^* = 4.0\,\mu\text{m}$, $R_{\text{gate}} = 5.0\,\mu\text{m}$, Learned U-Net N1, Inner-Val Jaccard = 0.8036, Held-Out Jaccard = 0.3649)**.
+- **Audit & Artifacts**: Independent reproducibility audit completed with verdict PASS WITH CORRECTIONS ([`AUDIT_REPORT.md`](results/phase7i_motion_selective_tracking/motion_experiment/AUDIT_REPORT.md), [`AUDIT_ADDENDUM.md`](results/phase7i_motion_selective_tracking/motion_experiment/AUDIT_ADDENDUM.md)). Complete report at [`REPORT_MOTION_EXPERIMENT.md`](results/phase7i_motion_selective_tracking/REPORT_MOTION_EXPERIMENT.md). Preregistration at [`preregistration_motion_experiment.json`](results/phase7i_motion_selective_tracking/preregistration_motion_experiment.json). Runner at [`experiments/run_phase7i_motion_aware_tracking.py`](experiments/run_phase7i_motion_aware_tracking.py). Unit tests at [`tests/test_causal_motion_tracker.py`](tests/test_causal_motion_tracker.py).

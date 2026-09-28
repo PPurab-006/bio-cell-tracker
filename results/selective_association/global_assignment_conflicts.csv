@@ -1,0 +1,154 @@
+case_type,transition,source_detection,target_detection,distance_um,learned_probability,learned_cost,is_true_edge,selected_globally,conflict_reason,competing_source,alternative_target
+HIGH_AFFINITY_UNASSIGNED,0->1,34,184,3.3348,0.5485,0.6006,False,False,Rejection: Cost (0.601) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,0->1,38,166,4.5598,0.5075,0.6782,False,False,Rejection: Cost (0.678) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,0->1,85,167,3.9146,0.5053,0.6826,False,False,Target outcompeted: Assigned to competing source 108,108.0,
+HIGH_AFFINITY_UNASSIGNED,0->1,89,131,3.6499,0.5192,0.6555,False,False,Rejection: Cost (0.655) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,0->1,95,129,4.4692,0.5917,0.5247,False,False,Target outcompeted: Assigned to competing source 96,96.0,
+HIGH_AFFINITY_UNASSIGNED,0->1,96,186,1.8767,0.6233,0.4727,False,False,Both endpoints matched to other candidates,63.0,129.0
+HIGH_AFFINITY_UNASSIGNED,0->1,109,107,4.9308,0.5529,0.5925,False,False,Both endpoints matched to other candidates,140.0,159.0
+HIGH_AFFINITY_UNASSIGNED,0->1,114,171,2.331,0.5208,0.6523,False,False,Target outcompeted: Assigned to competing source 142,142.0,
+HIGH_AFFINITY_UNASSIGNED,0->1,116,150,4.2748,0.643,0.4415,False,False,Source preference: Source linked to alternative target 151,,151.0
+HIGH_AFFINITY_UNASSIGNED,0->1,120,129,2.7394,0.5417,0.6131,False,False,Both endpoints matched to other candidates,96.0,97.0
+HIGH_AFFINITY_UNASSIGNED,0->1,122,175,2.4152,0.5335,0.6284,False,False,Both endpoints matched to other candidates,143.0,168.0
+HIGH_AFFINITY_UNASSIGNED,0->1,124,113,4.5395,0.5908,0.5263,False,False,Rejection: Cost (0.526) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,0->1,125,141,2.8607,0.5435,0.6096,False,False,Rejection: Cost (0.610) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,0->1,126,179,4.8622,0.8849,0.1223,True,False,Source preference: Source linked to alternative target 172,,172.0
+HIGH_AFFINITY_UNASSIGNED,0->1,133,105,3.0317,0.6027,0.5064,False,False,Source preference: Source linked to alternative target 102,,102.0
+HIGH_AFFINITY_UNASSIGNED,0->1,140,159,4.1395,0.9502,0.0511,False,False,Both endpoints matched to other candidates,109.0,107.0
+HIGH_AFFINITY_UNASSIGNED,0->1,143,158,4.9615,0.9572,0.0438,False,False,Both endpoints matched to other candidates,145.0,175.0
+HIGH_AFFINITY_UNASSIGNED,0->1,145,168,2.5005,0.582,0.5413,False,False,Both endpoints matched to other candidates,122.0,158.0
+HIGH_AFFINITY_UNASSIGNED,0->1,145,112,4.7201,0.593,0.5226,False,False,Source preference: Source linked to alternative target 158,,158.0
+HIGH_AFFINITY_UNASSIGNED,0->1,153,71,4.5644,0.5602,0.5795,False,False,Rejection: Cost (0.579) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,0->1,154,126,3.8463,0.6956,0.363,False,False,Both endpoints matched to other candidates,151.0,134.0
+HIGH_AFFINITY_UNASSIGNED,0->1,155,88,4.0881,0.7939,0.2308,False,False,Target outcompeted: Assigned to competing source 144,144.0,
+HIGH_AFFINITY_UNASSIGNED,0->1,163,142,1.333,0.9391,0.0629,False,False,Target outcompeted: Assigned to competing source 157,157.0,
+HIGH_AFFINITY_UNASSIGNED,1->2,75,81,1.2726,0.5149,0.6638,False,False,Rejection: Cost (0.664) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,1->2,83,142,1.9409,0.7938,0.2309,False,False,Source preference: Source linked to alternative target 150,,150.0
+HIGH_AFFINITY_UNASSIGNED,1->2,106,126,4.6356,0.5225,0.6491,False,False,Rejection: Cost (0.649) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,1->2,109,125,1.1188,0.5607,0.5786,False,False,Source preference: Source linked to alternative target 128,,128.0
+HIGH_AFFINITY_UNASSIGNED,1->2,113,125,1.1254,0.5279,0.6388,False,False,Rejection: Cost (0.639) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,1->2,120,149,1.581,0.8572,0.154,False,False,Both endpoints matched to other candidates,121.0,147.0
+HIGH_AFFINITY_UNASSIGNED,1->2,125,132,2.122,0.7407,0.3002,False,False,Both endpoints matched to other candidates,151.0,148.0
+HIGH_AFFINITY_UNASSIGNED,1->2,127,45,2.3577,0.5497,0.5983,False,False,Rejection: Cost (0.598) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,1->2,133,140,4.302,0.5088,0.6756,False,False,Rejection: Cost (0.676) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,1->2,133,99,4.6665,0.5095,0.6744,False,False,Rejection: Cost (0.674) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,1->2,140,110,2.0318,0.7295,0.3154,False,False,Target outcompeted: Assigned to competing source 156,156.0,
+HIGH_AFFINITY_UNASSIGNED,1->2,142,124,3.0641,0.5357,0.6242,False,False,Both endpoints matched to other candidates,143.0,111.0
+HIGH_AFFINITY_UNASSIGNED,1->2,143,111,1.7903,0.6194,0.479,False,False,Both endpoints matched to other candidates,142.0,124.0
+HIGH_AFFINITY_UNASSIGNED,1->2,150,132,3.1633,0.8638,0.1464,False,False,Both endpoints matched to other candidates,151.0,131.0
+HIGH_AFFINITY_UNASSIGNED,1->2,151,131,2.8651,0.5972,0.5155,False,False,Both endpoints matched to other candidates,150.0,132.0
+HIGH_AFFINITY_UNASSIGNED,1->2,154,93,4.7361,0.5736,0.5558,False,False,Rejection: Cost (0.556) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,1->2,155,110,4.0018,0.9831,0.0171,False,False,Both endpoints matched to other candidates,156.0,141.0
+HIGH_AFFINITY_UNASSIGNED,1->2,160,123,3.9484,0.9523,0.0488,False,False,Both endpoints matched to other candidates,147.0,144.0
+HIGH_AFFINITY_UNASSIGNED,1->2,183,153,1.9758,0.9437,0.0579,False,False,Source preference: Source linked to alternative target 146,,146.0
+HIGH_AFFINITY_UNASSIGNED,1->2,183,51,4.9166,0.9094,0.095,False,False,Source preference: Source linked to alternative target 146,,146.0
+HIGH_AFFINITY_UNASSIGNED,2->3,82,151,4.3504,0.6361,0.4524,False,False,Target outcompeted: Assigned to competing source 139,139.0,
+HIGH_AFFINITY_UNASSIGNED,2->3,107,108,4.7528,0.6197,0.4785,False,False,Target outcompeted: Assigned to competing source 141,141.0,
+HIGH_AFFINITY_UNASSIGNED,2->3,108,131,1.1559,0.5575,0.5842,False,False,Rejection: Cost (0.584) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,2->3,119,141,3.0451,0.5294,0.6361,False,False,Source preference: Source linked to alternative target 146,,146.0
+HIGH_AFFINITY_UNASSIGNED,2->3,119,144,4.9149,0.8792,0.1287,False,False,Source preference: Source linked to alternative target 146,,146.0
+HIGH_AFFINITY_UNASSIGNED,2->3,123,145,1.6643,0.6204,0.4774,False,False,Target outcompeted: Assigned to competing source 144,144.0,
+HIGH_AFFINITY_UNASSIGNED,2->3,124,136,4.7407,0.545,0.6069,False,False,Source preference: Source linked to alternative target 156,,156.0
+HIGH_AFFINITY_UNASSIGNED,2->3,127,134,3.7593,0.7998,0.2233,True,False,Source preference: Source linked to alternative target 138,,138.0
+HIGH_AFFINITY_UNASSIGNED,2->3,129,133,1.335,0.5226,0.6489,False,False,Rejection: Cost (0.649) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,2->3,130,148,3.0052,0.849,0.1637,False,False,Both endpoints matched to other candidates,147.0,112.0
+HIGH_AFFINITY_UNASSIGNED,2->3,132,149,4.9904,0.5221,0.6499,False,False,Rejection: Cost (0.650) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,2->3,133,128,4.2823,0.7789,0.2499,False,False,Both endpoints matched to other candidates,143.0,158.0
+HIGH_AFFINITY_UNASSIGNED,2->3,142,150,1.733,0.8251,0.1922,False,False,Both endpoints matched to other candidates,150.0,81.0
+HIGH_AFFINITY_UNASSIGNED,2->3,146,67,4.6449,0.751,0.2864,False,False,Target outcompeted: Assigned to competing source 153,153.0,
+HIGH_AFFINITY_UNASSIGNED,2->3,149,148,4.1429,0.801,0.2219,False,False,Target outcompeted: Assigned to competing source 147,147.0,
+HIGH_AFFINITY_UNASSIGNED,2->3,157,30,4.665,0.8655,0.1445,False,False,Source preference: Source linked to alternative target 154,,154.0
+HIGH_AFFINITY_UNASSIGNED,3->4,36,152,4.5217,0.543,0.6107,False,False,Rejection: Cost (0.611) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,3->4,112,128,2.6644,0.5394,0.6173,False,False,Rejection: Cost (0.617) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,3->4,112,121,3.9073,0.5494,0.599,False,False,Target outcompeted: Assigned to competing source 137,137.0,
+HIGH_AFFINITY_UNASSIGNED,3->4,133,137,1.784,0.825,0.1924,False,False,Source preference: Source linked to alternative target 132,,132.0
+HIGH_AFFINITY_UNASSIGNED,3->4,134,88,2.427,0.6144,0.4872,True,False,Both endpoints matched to other candidates,138.0,91.0
+HIGH_AFFINITY_UNASSIGNED,3->4,135,150,1.0321,0.868,0.1416,False,False,Target outcompeted: Assigned to competing source 127,127.0,
+HIGH_AFFINITY_UNASSIGNED,3->4,137,120,2.2591,0.6153,0.4856,False,False,Both endpoints matched to other candidates,148.0,121.0
+HIGH_AFFINITY_UNASSIGNED,3->4,138,91,2.4313,0.7177,0.3317,False,False,Both endpoints matched to other candidates,134.0,88.0
+HIGH_AFFINITY_UNASSIGNED,3->4,140,110,3.4506,0.5789,0.5466,False,False,Target outcompeted: Assigned to competing source 142,142.0,
+HIGH_AFFINITY_UNASSIGNED,3->4,141,127,4.7556,0.8533,0.1586,False,False,Target outcompeted: Assigned to competing source 144,144.0,
+HIGH_AFFINITY_UNASSIGNED,3->4,149,28,4.4255,0.653,0.4262,False,False,Source preference: Source linked to alternative target 122,,122.0
+HIGH_AFFINITY_UNASSIGNED,4->5,72,132,2.667,0.5728,0.5572,False,False,Rejection: Cost (0.557) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,4->5,103,138,4.2199,0.5388,0.6184,False,False,Target outcompeted: Assigned to competing source 149,149.0,
+HIGH_AFFINITY_UNASSIGNED,4->5,106,114,4.3795,0.6057,0.5014,False,False,Rejection: Cost (0.501) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,4->5,110,128,2.5622,0.7936,0.2312,True,False,Source preference: Source linked to alternative target 131,,131.0
+HIGH_AFFINITY_UNASSIGNED,4->5,121,127,1.3083,0.6304,0.4614,False,False,Target outcompeted: Assigned to competing source 128,128.0,
+HIGH_AFFINITY_UNASSIGNED,4->5,133,124,2.2857,0.5197,0.6545,False,False,Rejection: Cost (0.655) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,4->5,143,43,4.1561,0.5416,0.6132,False,False,Rejection: Cost (0.613) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,4->5,146,105,3.2276,0.5107,0.672,False,False,Both endpoints matched to other candidates,117.0,141.0
+HIGH_AFFINITY_UNASSIGNED,4->5,148,125,1.4424,0.871,0.1381,False,False,Both endpoints matched to other candidates,125.0,120.0
+HIGH_AFFINITY_UNASSIGNED,4->5,149,133,2.0127,0.851,0.1613,False,False,Source preference: Source linked to alternative target 138,,138.0
+HIGH_AFFINITY_UNASSIGNED,4->5,157,89,4.2951,0.873,0.1359,False,False,Source preference: Source linked to alternative target 66,,66.0
+HIGH_AFFINITY_UNASSIGNED,5->6,63,142,4.1888,0.5261,0.6422,False,False,Source preference: Source linked to alternative target 149,,149.0
+HIGH_AFFINITY_UNASSIGNED,5->6,71,114,1.1979,0.5316,0.6319,False,False,Rejection: Cost (0.632) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,5->6,77,119,2.1572,0.5433,0.6101,False,False,Rejection: Cost (0.610) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,5->6,80,146,4.0996,0.5847,0.5367,False,False,Target outcompeted: Assigned to competing source 123,123.0,
+HIGH_AFFINITY_UNASSIGNED,5->6,86,155,3.6755,0.5188,0.6561,False,False,Target outcompeted: Assigned to competing source 83,83.0,
+HIGH_AFFINITY_UNASSIGNED,5->6,100,144,2.6482,0.5407,0.6149,False,False,Source preference: Source linked to alternative target 148,,148.0
+HIGH_AFFINITY_UNASSIGNED,5->6,112,113,0.7991,0.5255,0.6434,False,False,Target outcompeted: Assigned to competing source 116,116.0,
+HIGH_AFFINITY_UNASSIGNED,5->6,117,108,2.3899,0.7944,0.2301,False,False,Source preference: Source linked to alternative target 112,,112.0
+HIGH_AFFINITY_UNASSIGNED,5->6,125,117,1.6121,0.7832,0.2444,False,False,Source preference: Source linked to alternative target 121,,121.0
+HIGH_AFFINITY_UNASSIGNED,5->6,126,132,3.7153,0.5998,0.5112,False,False,Rejection: Cost (0.511) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,5->6,127,113,4.4939,0.9469,0.0546,False,False,Both endpoints matched to other candidates,116.0,143.0
+HIGH_AFFINITY_UNASSIGNED,5->6,133,88,4.3033,0.6757,0.392,False,False,Target outcompeted: Assigned to competing source 138,138.0,
+HIGH_AFFINITY_UNASSIGNED,5->6,135,127,2.204,0.6958,0.3627,False,False,Target outcompeted: Assigned to competing source 147,147.0,
+HIGH_AFFINITY_UNASSIGNED,5->6,138,125,2.6882,0.6526,0.4269,False,False,Source preference: Source linked to alternative target 88,,88.0
+HIGH_AFFINITY_UNASSIGNED,5->6,138,74,3.6907,0.596,0.5175,False,False,Source preference: Source linked to alternative target 88,,88.0
+HIGH_AFFINITY_UNASSIGNED,5->6,142,151,2.8421,0.9792,0.021,False,False,Source preference: Source linked to alternative target 105,,105.0
+HIGH_AFFINITY_UNASSIGNED,5->6,143,29,4.6436,0.9166,0.087,False,False,Source preference: Source linked to alternative target 156,,156.0
+HIGH_AFFINITY_UNASSIGNED,6->7,84,109,3.5224,0.6275,0.4661,False,False,Target outcompeted: Assigned to competing source 137,137.0,
+HIGH_AFFINITY_UNASSIGNED,6->7,100,137,2.8146,0.8819,0.1257,False,False,Target outcompeted: Assigned to competing source 115,115.0,
+HIGH_AFFINITY_UNASSIGNED,6->7,101,123,3.9456,0.853,0.159,False,False,Target outcompeted: Assigned to competing source 125,125.0,
+HIGH_AFFINITY_UNASSIGNED,6->7,107,83,2.6779,0.5467,0.6039,False,False,Rejection: Cost (0.604) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,6->7,115,120,2.8536,0.5464,0.6044,False,False,Both endpoints matched to other candidates,145.0,137.0
+HIGH_AFFINITY_UNASSIGNED,6->7,120,105,1.1666,0.6521,0.4276,False,False,Target outcompeted: Assigned to competing source 119,119.0,
+HIGH_AFFINITY_UNASSIGNED,6->7,122,125,0.8069,0.9193,0.0841,False,False,Target outcompeted: Assigned to competing source 136,136.0,
+HIGH_AFFINITY_UNASSIGNED,6->7,124,116,4.5092,0.7274,0.3183,False,False,Target outcompeted: Assigned to competing source 154,154.0,
+HIGH_AFFINITY_UNASSIGNED,6->7,130,96,4.1127,0.7123,0.3392,False,False,Source preference: Source linked to alternative target 101,,101.0
+HIGH_AFFINITY_UNASSIGNED,6->7,133,111,3.1762,0.5902,0.5272,False,False,Rejection: Cost (0.527) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,6->7,137,83,1.668,0.7638,0.2694,False,False,Source preference: Source linked to alternative target 109,,109.0
+HIGH_AFFINITY_UNASSIGNED,6->7,139,128,3.6858,0.9174,0.0862,False,False,Both endpoints matched to other candidates,141.0,119.0
+HIGH_AFFINITY_UNASSIGNED,6->7,139,66,4.9608,0.6333,0.4568,False,False,Source preference: Source linked to alternative target 119,,119.0
+HIGH_AFFINITY_UNASSIGNED,6->7,141,119,3.002,0.5861,0.5343,False,False,Both endpoints matched to other candidates,139.0,128.0
+HIGH_AFFINITY_UNASSIGNED,6->7,145,137,3.8701,0.9831,0.0171,False,False,Both endpoints matched to other candidates,115.0,120.0
+HIGH_AFFINITY_UNASSIGNED,6->7,147,127,4.2292,0.9664,0.0342,False,False,Both endpoints matched to other candidates,152.0,103.0
+HIGH_AFFINITY_UNASSIGNED,6->7,156,38,4.7246,0.9603,0.0405,False,False,Source preference: Source linked to alternative target 135,,135.0
+HIGH_AFFINITY_UNASSIGNED,6->7,157,53,4.57,0.9029,0.1021,False,False,Source preference: Source linked to alternative target 130,,130.0
+HIGH_AFFINITY_UNASSIGNED,6->7,158,108,4.1442,0.9613,0.0394,False,False,Source preference: Source linked to alternative target 114,,114.0
+HIGH_AFFINITY_UNASSIGNED,6->7,160,19,2.9365,0.5302,0.6344,False,False,Both endpoints matched to other candidates,155.0,32.0
+HIGH_AFFINITY_UNASSIGNED,7->8,93,103,3.8254,0.6268,0.4671,False,False,Target outcompeted: Assigned to competing source 107,107.0,
+HIGH_AFFINITY_UNASSIGNED,7->8,95,122,3.3634,0.8674,0.1422,False,False,Both endpoints matched to other candidates,97.0,124.0
+HIGH_AFFINITY_UNASSIGNED,7->8,96,88,1.4494,0.7419,0.2985,False,False,Source preference: Source linked to alternative target 89,,89.0
+HIGH_AFFINITY_UNASSIGNED,7->8,101,89,3.8647,0.6065,0.5,False,False,Target outcompeted: Assigned to competing source 96,96.0,
+HIGH_AFFINITY_UNASSIGNED,7->8,102,107,3.2745,0.5469,0.6034,False,False,Rejection: Cost (0.603) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,7->8,105,100,4.1283,0.8771,0.1311,False,False,Target outcompeted: Assigned to competing source 124,124.0,
+HIGH_AFFINITY_UNASSIGNED,7->8,106,120,4.9251,0.6843,0.3794,False,False,Source preference: Source linked to alternative target 117,,117.0
+HIGH_AFFINITY_UNASSIGNED,7->8,107,121,3.3984,0.8034,0.2189,False,False,Source preference: Source linked to alternative target 103,,103.0
+HIGH_AFFINITY_UNASSIGNED,7->8,110,130,3.5968,0.9818,0.0183,False,False,Both endpoints matched to other candidates,146.0,116.0
+HIGH_AFFINITY_UNASSIGNED,7->8,112,114,2.3767,0.6389,0.448,True,False,Source preference: Source linked to alternative target 118,,118.0
+HIGH_AFFINITY_UNASSIGNED,7->8,119,115,1.7487,0.6249,0.4702,False,False,Both endpoints matched to other candidates,121.0,133.0
+HIGH_AFFINITY_UNASSIGNED,7->8,119,113,4.9671,0.8386,0.176,False,False,Both endpoints matched to other candidates,126.0,133.0
+HIGH_AFFINITY_UNASSIGNED,7->8,120,109,3.2547,0.5397,0.6167,False,False,Rejection: Cost (0.617) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,7->8,121,113,4.8152,0.941,0.0608,False,False,Both endpoints matched to other candidates,126.0,115.0
+HIGH_AFFINITY_UNASSIGNED,7->8,128,133,1.8479,0.8827,0.1247,False,False,Both endpoints matched to other candidates,119.0,52.0
+HIGH_AFFINITY_UNASSIGNED,7->8,136,97,1.6397,0.7197,0.3289,False,False,Target outcompeted: Assigned to competing source 148,148.0,
+HIGH_AFFINITY_UNASSIGNED,7->8,138,84,3.4195,0.8365,0.1786,False,False,Target outcompeted: Assigned to competing source 142,142.0,
+HIGH_AFFINITY_UNASSIGNED,7->8,145,82,4.3398,0.7572,0.2781,False,False,Source preference: Source linked to alternative target 78,,78.0
+HIGH_AFFINITY_UNASSIGNED,7->8,145,62,4.3797,0.785,0.2421,False,False,Source preference: Source linked to alternative target 78,,78.0
+HIGH_AFFINITY_UNASSIGNED,8->9,91,122,4.2128,0.5035,0.6861,False,False,Target outcompeted: Assigned to competing source 122,122.0,
+HIGH_AFFINITY_UNASSIGNED,8->9,93,128,1.4204,0.5574,0.5845,False,False,Target outcompeted: Assigned to competing source 102,102.0,
+HIGH_AFFINITY_UNASSIGNED,8->9,94,121,4.4073,0.5572,0.5848,False,False,Target outcompeted: Assigned to competing source 123,123.0,
+HIGH_AFFINITY_UNASSIGNED,8->9,95,123,2.2186,0.5089,0.6755,False,False,Rejection: Cost (0.675) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,8->9,100,115,3.0453,0.5832,0.5392,False,False,Both endpoints matched to other candidates,98.0,100.0
+HIGH_AFFINITY_UNASSIGNED,8->9,101,120,2.6361,0.57,0.5622,False,False,Rejection: Cost (0.562) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,8->9,101,92,4.9432,0.5534,0.5917,False,False,Rejection: Cost (0.592) exceeded C=0.50 threshold,,
+HIGH_AFFINITY_UNASSIGNED,8->9,102,112,4.2054,0.5478,0.6019,False,False,Source preference: Source linked to alternative target 128,,128.0
+HIGH_AFFINITY_UNASSIGNED,8->9,106,105,1.6913,0.5259,0.6427,False,False,Both endpoints matched to other candidates,105.0,99.0
+HIGH_AFFINITY_UNASSIGNED,8->9,107,116,4.9161,0.9387,0.0633,False,False,Both endpoints matched to other candidates,118.0,117.0
+HIGH_AFFINITY_UNASSIGNED,8->9,109,107,2.4622,0.8391,0.1754,False,False,Source preference: Source linked to alternative target 130,,130.0
+HIGH_AFFINITY_UNASSIGNED,8->9,111,113,2.4537,0.684,0.3797,False,False,Source preference: Source linked to alternative target 124,,124.0
+HIGH_AFFINITY_UNASSIGNED,8->9,111,110,3.2815,0.9197,0.0837,False,False,Source preference: Source linked to alternative target 124,,124.0
+HIGH_AFFINITY_UNASSIGNED,8->9,114,116,2.0292,0.6569,0.4203,True,False,Target outcompeted: Assigned to competing source 118,118.0,
+HIGH_AFFINITY_UNASSIGNED,8->9,119,98,3.5831,0.7479,0.2905,False,False,Target outcompeted: Assigned to competing source 115,115.0,
+HIGH_AFFINITY_UNASSIGNED,8->9,132,121,1.4969,0.9735,0.0268,False,False,Target outcompeted: Assigned to competing source 123,123.0,

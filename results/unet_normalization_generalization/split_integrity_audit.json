@@ -1,0 +1,22 @@
+{
+  "status": "PASSED",
+  "train_samples": [
+    "44b6_d29c9ab2",
+    "6bba_bb9f20c3"
+  ],
+  "val_samples": [
+    "44b6_d29c9ab2",
+    "6bba_bb9f20c3"
+  ],
+  "held_out_samples": [
+    "6bba_43fea39d"
+  ],
+  "held_out_sample_strictly_quarantined": true,
+  "max_train_t": 55,
+  "min_inner_val_t": 70,
+  "temporal_buffer_frames": 15,
+  "spatial_overlap_violations": 0,
+  "total_train_patches": 86,
+  "total_inner_val_patches": 20,
+  "total_held_out_patches": 12
+}

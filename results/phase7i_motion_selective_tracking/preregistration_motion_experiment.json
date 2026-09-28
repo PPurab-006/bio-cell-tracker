@@ -1,0 +1,79 @@
+{
+  "experiment_id": "Phase 7I-B: Controlled Motion-Aware Association Experiment",
+  "date": "2026-09-28",
+  "hypothesis": "A causal, history-regularized and damped velocity association model can improve annotated edge recovery over frozen selective nearest-neighbor tracking without triggering axial localization noise amplification.",
+  "frozen_reference_baseline": {
+    "tracker": "SelectiveNearestNeighborTracker",
+    "theta_um": 4.0,
+    "R_gate_um": 5.0,
+    "distance_metric": "euclidean",
+    "cost_unmatched": 2.0,
+    "inner_val_jaccard_ref": 0.8036,
+    "inner_val_tp_ref": 90,
+    "inner_val_fp_ref": 7,
+    "inner_val_fn_ref": 15
+  },
+  "evaluated_conditions": [
+    {
+      "condition_id": "Condition_A_Frozen_Baseline",
+      "tracker_class": "SelectiveNearestNeighborTracker",
+      "motion_model": "static",
+      "theta_um": 4.0,
+      "R_gate_um": 5.0,
+      "alpha_damping": 0.0,
+      "dual_envelope_gate": false,
+      "description": "Audited Phase 7I-A frozen baseline"
+    },
+    {
+      "condition_id": "Condition_B_Causal_Linear_Velocity",
+      "tracker_class": "CausalMotionSelectiveTracker",
+      "motion_model": "linear_constant_velocity",
+      "theta_um": 4.0,
+      "R_gate_um": 5.0,
+      "alpha_damping": 1.0,
+      "dual_envelope_gate": false,
+      "min_history_length": 2,
+      "description": "Unregularized two-point linear velocity extrapolation (negative control)"
+    },
+    {
+      "condition_id": "Condition_C_Causal_Damped_Velocity",
+      "tracker_class": "CausalMotionSelectiveTracker",
+      "motion_model": "history_adaptive_damped_velocity",
+      "theta_um": 4.0,
+      "R_gate_um": 5.0,
+      "alpha_by_history": {
+        "1": 0.0,
+        "2": 0.20,
+        "3": 0.40,
+        "4": 0.40
+      },
+      "ema_velocity_beta": 0.5,
+      "dual_envelope_gate": true,
+      "min_history_length": 2,
+      "description": "Regularized damped velocity with history-adaptive weights and dual-envelope gating"
+    },
+    {
+      "condition_id": "Condition_D_Ablation_Dual_Envelope_Static",
+      "tracker_class": "CausalMotionSelectiveTracker",
+      "motion_model": "static_dual_envelope",
+      "theta_um": 4.0,
+      "R_gate_um": 5.0,
+      "alpha_damping": 0.0,
+      "dual_envelope_gate": true,
+      "description": "Ablation isolating dual-envelope gate contribution with zero velocity term"
+    }
+  ],
+  "splits_evaluated": ["train", "inner_val"],
+  "quarantined_split": "held_out_val",
+  "quarantined_sample_id": "6bba_43fea39d",
+  "primary_detector": "Learned_UNet_N1",
+  "decision_criteria": {
+    "adoption_category": "Category 1: True Tracking Improvement (Delta_TP > 0 AND Delta_Jaccard > 0 on Inner Validation)",
+    "rejection_categories": [
+      "Category 2: Precision-Driven Pseudo-Gain (Delta_Jaccard > 0 AND Delta_TP <= 0)",
+      "Category 3: Metric-Neutral Reorganization (Delta_TP == 0 AND Delta_Jaccard == 0)",
+      "Category 4: Unambiguous Degradation (Delta_TP < 0 OR Delta_Jaccard < 0)"
+    ]
+  },
+  "held_out_policy": "Strict quarantine. Zero evaluation, zero tuning on sample 6bba_43fea39d until inner-validation results are documented and frozen."
+}

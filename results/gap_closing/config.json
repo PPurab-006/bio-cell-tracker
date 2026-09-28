@@ -1,0 +1,33 @@
+{
+  "milestone": "6B",
+  "title": "Multi-Frame Causal Gap Closing and Track Reconnection",
+  "dataset": "t101",
+  "total_frames": 20,
+  "anisotropic_voxel_scale_zyx_um": [
+    2.0,
+    0.5,
+    0.5
+  ],
+  "eval_cutoff_um": 7.0,
+  "direct_gate_um": 5.0,
+  "base_gap_gate_um": 7.0,
+  "gap_uncertainty_scale": 0.25,
+  "residual_gate_scale": 0.05,
+  "max_gap_frames_evaluated": [
+    0,
+    1,
+    2
+  ],
+  "hybrid_association": {
+    "unmatched_cost_C": 0.5,
+    "lambda_distance": 0.1,
+    "model_path": "results/learned_affinity/model.joblib",
+    "scaler_path": "results/learned_affinity/scaler.joblib"
+  },
+  "partitions": {
+    "Training": "frames 0-5",
+    "Validation": "frames 5-9",
+    "Extended_Holdout": "frames 10-19",
+    "Continuous": "frames 0-19"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "milestone": "5C",
+  "description": "Selective Association / Unmatched-Cost Assignment Experiments",
+  "detector": "D2 (Adaptive DoG, 1566 detections)",
+  "refinement": "R1 (3D quadratic Taylor peak interpolation)",
+  "candidate_gate_um": 5.0,
+  "evaluation_cutoff_um": 7.0,
+  "frozen_baseline": {
+    "model": "D2 + R1 + distance_only (R1_A3)",
+    "tp": 11,
+    "fp": 13,
+    "fn": 16,
+    "adjusted_edge_jaccard": 0.275
+  },
+  "distance_unmatched_costs": [
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0
+  ],
+  "learned_unmatched_costs": [
+    0.25,
+    0.5,
+    0.75,
+    1.0,
+    1.25,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    4.0
+  ],
+  "hybrid_lambdas": [
+    0.1,
+    0.25,
+    0.5,
+    1.0
+  ],
+  "cost_transformation": "cost = -log(P(TRUE_EDGE) + 1e-6) + lambda * (dist_um / 5.0)",
+  "augmented_matrix_formulation": "Square (n+m) x (m+n) with diagonal dummy blocks C_unm/2 and zero dummy-dummy block",
+  "train_transitions": [
+    "0->1",
+    "1->2",
+    "2->3",
+    "3->4",
+    "4->5"
+  ],
+  "validation_transitions": [
+    "5->6",
+    "6->7",
+    "7->8",
+    "8->9"
+  ]
+}

@@ -4,6 +4,7 @@ from .base import BaseDetector, DetectionResult
 from .classical_dog import AnisotropicDoGDetector
 from .local_maxima import extract_3d_local_maxima
 from .adaptive_dog import AdaptiveDoGDetector
+from .multiscale_dog import MultiScaleDoGDetector
 from .temporal_observability import (
     extract_physical_patch,
     compute_intensity_statistics,
@@ -17,6 +18,7 @@ __all__ = [
     "DetectionResult",
     "AnisotropicDoGDetector",
     "AdaptiveDoGDetector",
+    "MultiScaleDoGDetector",
     "extract_3d_local_maxima",
     "extract_physical_patch",
     "compute_intensity_statistics",

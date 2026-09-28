@@ -1,0 +1,52 @@
+{
+  "experiment": "compact_3d_unet_multipatch_feasibility",
+  "random_seed": 42,
+  "device": "cuda",
+  "model": {
+    "name": "Compact3DUNet",
+    "in_channels": 1,
+    "out_channels": 1,
+    "base_channels": 16,
+    "num_parameters": 318801,
+    "stem_kernel": [
+      1,
+      3,
+      3
+    ],
+    "pool1_kernel": [
+      1,
+      2,
+      2
+    ],
+    "pool2_kernel": [
+      2,
+      2,
+      2
+    ]
+  },
+  "training": {
+    "steps": 200,
+    "batch_size": 4,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "grad_clip_norm": 1.0,
+    "loss_function": "masked_l1_loss",
+    "r_pos": 2.5,
+    "r_margin": 5.0,
+    "w_bg": 0.0
+  },
+  "splits": {
+    "train_samples": [
+      "6bba_bb9f20c3",
+      "44b6_d29c9ab2"
+    ],
+    "inner_val_samples": [
+      "6bba_bb9f20c3",
+      "44b6_d29c9ab2"
+    ],
+    "held_out_samples": [
+      "6bba_43fea39d"
+    ]
+  }
+}

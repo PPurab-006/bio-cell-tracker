@@ -1,0 +1,4 @@
+method_id,total_sequences_evaluated,total_runtime_s,mean_runtime_per_sequence_ms
+Augmented_Hungarian_Theta5.0,36,0.138,3.82
+Baseline_Hungarian,36,0.134,3.71
+Selective_Theta4.0,36,0.138,3.84

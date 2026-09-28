@@ -1,0 +1,26 @@
+{
+  "milestone": "6A",
+  "description": "Causal Velocity-Adaptive Candidate Gating Experiment",
+  "timestamp": "2026-09-26 23:04:46",
+  "dataset": "data/samples/t101",
+  "total_frames": 20,
+  "eval_cutoff_um": 7.0,
+  "selective_unmatched_cost": 0.5,
+  "hybrid_lambda_dist": 0.1,
+  "gating_methods": [
+    "Fixed_5um",
+    "Fixed_6um",
+    "Fixed_7um",
+    "Fixed_8um",
+    "Velocity_Adaptive",
+    "Conservative_Hybrid"
+  ],
+  "association_methods": [
+    "Distance_Association",
+    "Hybrid_Selective"
+  ],
+  "adaptive_gate_base_radius_um": 4.5,
+  "adaptive_gate_max_radius_um": 8.0,
+  "model_path": "results/learned_affinity/model.joblib",
+  "scaler_path": "results/learned_affinity/scaler.joblib"
+}

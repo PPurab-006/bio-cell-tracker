@@ -1,0 +1,5 @@
+OS: Linux-7.0.0-34-generic-x86_64-with-glibc2.43
+Python: 3.11.15
+PyTorch: 2.14.0+cu130
+CUDA Available: True
+Device Name: NVIDIA GeForce RTX 3050 4GB Laptop GPU

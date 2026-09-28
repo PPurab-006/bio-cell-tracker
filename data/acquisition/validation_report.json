@@ -1,0 +1,634 @@
+{
+  "timestamp": "2026-09-27 18:46:57 UTC",
+  "raw_dir": "data/kaggle_raw/train",
+  "samples": {
+    "6bba_43fea39d": {
+      "sample_id": "6bba_43fea39d",
+      "zarr_path": "data/kaggle_raw/train/6bba_43fea39d.zarr",
+      "geff_path": "data/kaggle_raw/train/6bba_43fea39d.geff",
+      "zarr_exists": true,
+      "geff_exists": true,
+      "validation_passed": true,
+      "checks": [
+        {
+          "check": "spatial_and_temporal_bounds",
+          "passed": true,
+          "detail": {
+            "z_bounds": [
+              1,
+              63,
+              64
+            ],
+            "y_bounds": [
+              33,
+              183,
+              256
+            ],
+            "x_bounds": [
+              6,
+              254,
+              256
+            ],
+            "t_bounds": [
+              0,
+              99,
+              100
+            ]
+          }
+        },
+        {
+          "check": "physical_scale_match",
+          "passed": true,
+          "detail": {
+            "zarr_scale_zyx": [
+              1.625,
+              0.40625,
+              0.40625
+            ],
+            "geff_scale_zyx": [
+              1.625,
+              0.40625,
+              0.40625
+            ]
+          }
+        },
+        {
+          "check": "loader_integration",
+          "passed": true,
+          "detail": "load_dataset OK"
+        }
+      ],
+      "image": {
+        "shape": [
+          100,
+          64,
+          256,
+          256
+        ],
+        "dtype": "uint16",
+        "chunk_shape": [
+          1,
+          64,
+          256,
+          256
+        ],
+        "axes": [
+          {
+            "name": "T",
+            "type": "time",
+            "unit": "second"
+          },
+          {
+            "name": "Z",
+            "type": "space",
+            "unit": "micrometer"
+          },
+          {
+            "name": "Y",
+            "type": "space",
+            "unit": "micrometer"
+          },
+          {
+            "name": "X",
+            "type": "space",
+            "unit": "micrometer"
+          }
+        ],
+        "scale": [
+          1.0,
+          1.625,
+          0.40625,
+          0.40625
+        ],
+        "read_verification": {
+          "t0": {
+            "shape": [
+              64,
+              256,
+              256
+            ],
+            "dtype": "uint16",
+            "min": 0,
+            "max": 955,
+            "mean": 50.931546449661255
+          },
+          "t50": {
+            "shape": [
+              64,
+              256,
+              256
+            ],
+            "dtype": "uint16",
+            "min": 0,
+            "max": 1105,
+            "mean": 47.47279357910156
+          },
+          "t99": {
+            "shape": [
+              64,
+              256,
+              256
+            ],
+            "dtype": "uint16",
+            "min": 1,
+            "max": 1275,
+            "mean": 55.22173500061035
+          }
+        },
+        "zarr_inspect_sec": 0.056
+      },
+      "geff": {
+        "num_nodes": 910,
+        "num_edges": 880,
+        "estimated_total_nodes": 5748.0,
+        "t_range": [
+          0,
+          99
+        ],
+        "z_range": [
+          1,
+          63
+        ],
+        "y_range": [
+          33,
+          183
+        ],
+        "x_range": [
+          6,
+          254
+        ],
+        "edge_delta_t_distribution": {
+          "1": 880
+        },
+        "nodes_per_frame_stats": {
+          "min": 6,
+          "max": 14,
+          "mean": 9.1,
+          "frames_with_nodes": 100
+        },
+        "geff_axes": [
+          {
+            "name": "t",
+            "type": "time",
+            "unit": null,
+            "min": 0.0,
+            "max": 99.0,
+            "scale": 1.0,
+            "scaled_unit": null,
+            "offset": null
+          },
+          {
+            "name": "z",
+            "type": "space",
+            "unit": null,
+            "min": 1.0,
+            "max": 63.0,
+            "scale": 1.625,
+            "scaled_unit": null,
+            "offset": null
+          },
+          {
+            "name": "y",
+            "type": "space",
+            "unit": null,
+            "min": 33.0,
+            "max": 183.0,
+            "scale": 0.40625,
+            "scaled_unit": null,
+            "offset": null
+          },
+          {
+            "name": "x",
+            "type": "space",
+            "unit": null,
+            "min": 6.0,
+            "max": 254.0,
+            "scale": 0.40625,
+            "scaled_unit": null,
+            "offset": null
+          }
+        ],
+        "geff_inspect_sec": 0.016
+      }
+    },
+    "6bba_bb9f20c3": {
+      "sample_id": "6bba_bb9f20c3",
+      "zarr_path": "data/kaggle_raw/train/6bba_bb9f20c3.zarr",
+      "geff_path": "data/kaggle_raw/train/6bba_bb9f20c3.geff",
+      "zarr_exists": true,
+      "geff_exists": true,
+      "validation_passed": true,
+      "checks": [
+        {
+          "check": "spatial_and_temporal_bounds",
+          "passed": true,
+          "detail": {
+            "z_bounds": [
+              0,
+              57,
+              64
+            ],
+            "y_bounds": [
+              3,
+              253,
+              256
+            ],
+            "x_bounds": [
+              3,
+              251,
+              256
+            ],
+            "t_bounds": [
+              4,
+              99,
+              100
+            ]
+          }
+        },
+        {
+          "check": "physical_scale_match",
+          "passed": true,
+          "detail": {
+            "zarr_scale_zyx": [
+              1.625,
+              0.40625,
+              0.40625
+            ],
+            "geff_scale_zyx": [
+              1.625,
+              0.40625,
+              0.40625
+            ]
+          }
+        },
+        {
+          "check": "loader_integration",
+          "passed": true,
+          "detail": "load_dataset OK"
+        }
+      ],
+      "image": {
+        "shape": [
+          100,
+          64,
+          256,
+          256
+        ],
+        "dtype": "uint16",
+        "chunk_shape": [
+          1,
+          64,
+          256,
+          256
+        ],
+        "axes": [
+          {
+            "name": "T",
+            "type": "time",
+            "unit": "second"
+          },
+          {
+            "name": "Z",
+            "type": "space",
+            "unit": "micrometer"
+          },
+          {
+            "name": "Y",
+            "type": "space",
+            "unit": "micrometer"
+          },
+          {
+            "name": "X",
+            "type": "space",
+            "unit": "micrometer"
+          }
+        ],
+        "scale": [
+          1.0,
+          1.625,
+          0.40625,
+          0.40625
+        ],
+        "read_verification": {
+          "t0": {
+            "shape": [
+              64,
+              256,
+              256
+            ],
+            "dtype": "uint16",
+            "min": 16,
+            "max": 1959,
+            "mean": 206.29618883132935
+          },
+          "t50": {
+            "shape": [
+              64,
+              256,
+              256
+            ],
+            "dtype": "uint16",
+            "min": 16,
+            "max": 2344,
+            "mean": 193.43918228149414
+          },
+          "t99": {
+            "shape": [
+              64,
+              256,
+              256
+            ],
+            "dtype": "uint16",
+            "min": 13,
+            "max": 1636,
+            "mean": 162.53207206726074
+          }
+        },
+        "zarr_inspect_sec": 0.059
+      },
+      "geff": {
+        "num_nodes": 1925,
+        "num_edges": 1879,
+        "estimated_total_nodes": 23071.0,
+        "t_range": [
+          4,
+          99
+        ],
+        "z_range": [
+          0,
+          57
+        ],
+        "y_range": [
+          3,
+          253
+        ],
+        "x_range": [
+          3,
+          251
+        ],
+        "edge_delta_t_distribution": {
+          "1": 1879
+        },
+        "nodes_per_frame_stats": {
+          "min": 15,
+          "max": 25,
+          "mean": 20.05,
+          "frames_with_nodes": 96
+        },
+        "geff_axes": [
+          {
+            "name": "t",
+            "type": "time",
+            "unit": null,
+            "min": 4.0,
+            "max": 99.0,
+            "scale": 1.0,
+            "scaled_unit": null,
+            "offset": null
+          },
+          {
+            "name": "z",
+            "type": "space",
+            "unit": null,
+            "min": 0.0,
+            "max": 57.0,
+            "scale": 1.625,
+            "scaled_unit": null,
+            "offset": null
+          },
+          {
+            "name": "y",
+            "type": "space",
+            "unit": null,
+            "min": 3.0,
+            "max": 253.0,
+            "scale": 0.40625,
+            "scaled_unit": null,
+            "offset": null
+          },
+          {
+            "name": "x",
+            "type": "space",
+            "unit": null,
+            "min": 3.0,
+            "max": 251.0,
+            "scale": 0.40625,
+            "scaled_unit": null,
+            "offset": null
+          }
+        ],
+        "geff_inspect_sec": 0.01
+      }
+    },
+    "44b6_d29c9ab2": {
+      "sample_id": "44b6_d29c9ab2",
+      "zarr_path": "data/kaggle_raw/train/44b6_d29c9ab2.zarr",
+      "geff_path": "data/kaggle_raw/train/44b6_d29c9ab2.geff",
+      "zarr_exists": true,
+      "geff_exists": true,
+      "validation_passed": true,
+      "checks": [
+        {
+          "check": "spatial_and_temporal_bounds",
+          "passed": true,
+          "detail": {
+            "z_bounds": [
+              0,
+              59,
+              64
+            ],
+            "y_bounds": [
+              0,
+              255,
+              256
+            ],
+            "x_bounds": [
+              18,
+              255,
+              256
+            ],
+            "t_bounds": [
+              0,
+              99,
+              100
+            ]
+          }
+        },
+        {
+          "check": "physical_scale_match",
+          "passed": true,
+          "detail": {
+            "zarr_scale_zyx": [
+              1.625,
+              0.40625,
+              0.40625
+            ],
+            "geff_scale_zyx": [
+              1.625,
+              0.40625,
+              0.40625
+            ]
+          }
+        },
+        {
+          "check": "loader_integration",
+          "passed": true,
+          "detail": "load_dataset OK"
+        }
+      ],
+      "image": {
+        "shape": [
+          100,
+          64,
+          256,
+          256
+        ],
+        "dtype": "uint16",
+        "chunk_shape": [
+          1,
+          64,
+          256,
+          256
+        ],
+        "axes": [
+          {
+            "name": "T",
+            "type": "time",
+            "unit": "second"
+          },
+          {
+            "name": "Z",
+            "type": "space",
+            "unit": "micrometer"
+          },
+          {
+            "name": "Y",
+            "type": "space",
+            "unit": "micrometer"
+          },
+          {
+            "name": "X",
+            "type": "space",
+            "unit": "micrometer"
+          }
+        ],
+        "scale": [
+          1.0,
+          1.625,
+          0.40625,
+          0.40625
+        ],
+        "read_verification": {
+          "t0": {
+            "shape": [
+              64,
+              256,
+              256
+            ],
+            "dtype": "uint16",
+            "min": 15,
+            "max": 3289,
+            "mean": 311.21196389198303
+          },
+          "t50": {
+            "shape": [
+              64,
+              256,
+              256
+            ],
+            "dtype": "uint16",
+            "min": 28,
+            "max": 3701,
+            "mean": 400.02950143814087
+          },
+          "t99": {
+            "shape": [
+              64,
+              256,
+              256
+            ],
+            "dtype": "uint16",
+            "min": 19,
+            "max": 3197,
+            "mean": 447.5474078655243
+          }
+        },
+        "zarr_inspect_sec": 0.045
+      },
+      "geff": {
+        "num_nodes": 1353,
+        "num_edges": 1328,
+        "estimated_total_nodes": 38055.0,
+        "t_range": [
+          0,
+          99
+        ],
+        "z_range": [
+          0,
+          59
+        ],
+        "y_range": [
+          0,
+          255
+        ],
+        "x_range": [
+          18,
+          255
+        ],
+        "edge_delta_t_distribution": {
+          "1": 1328
+        },
+        "nodes_per_frame_stats": {
+          "min": 10,
+          "max": 16,
+          "mean": 13.53,
+          "frames_with_nodes": 100
+        },
+        "geff_axes": [
+          {
+            "name": "t",
+            "type": "time",
+            "unit": null,
+            "min": 0.0,
+            "max": 99.0,
+            "scale": 1.0,
+            "scaled_unit": null,
+            "offset": null
+          },
+          {
+            "name": "z",
+            "type": "space",
+            "unit": null,
+            "min": 0.0,
+            "max": 59.0,
+            "scale": 1.625,
+            "scaled_unit": null,
+            "offset": null
+          },
+          {
+            "name": "y",
+            "type": "space",
+            "unit": null,
+            "min": 0.0,
+            "max": 255.0,
+            "scale": 0.40625,
+            "scaled_unit": null,
+            "offset": null
+          },
+          {
+            "name": "x",
+            "type": "space",
+            "unit": null,
+            "min": 18.0,
+            "max": 255.0,
+            "scale": 0.40625,
+            "scaled_unit": null,
+            "offset": null
+          }
+        ],
+        "geff_inspect_sec": 0.007
+      }
+    }
+  },
+  "all_passed": true
+}

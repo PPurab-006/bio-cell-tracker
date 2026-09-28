@@ -1,0 +1,38 @@
+{
+  "experiment": "Phase 7I-A: Controlled Selective-Assignment Tracking Experiment",
+  "date": "2026-09-28",
+  "random_seed": 42,
+  "splits_evaluated": [
+    "train",
+    "inner_val"
+  ],
+  "quarantined_split": "held_out_val",
+  "quarantined_sample_id": "6bba_43fea39d",
+  "hard_gate_R_gate_um": 5.0,
+  "theta_sweep_um": [
+    3.0,
+    3.5,
+    4.0,
+    4.5,
+    5.0
+  ],
+  "detectors": [
+    "Learned_UNet_N1",
+    "Learned_UNet_N0",
+    "Classical_DoG"
+  ],
+  "methods_evaluated": [
+    "Baseline_Hungarian",
+    "Selective_Theta3.0",
+    "Selective_Theta3.5",
+    "Selective_Theta4.0",
+    "Selective_Theta4.5",
+    "Augmented_Hungarian_Theta5.0"
+  ],
+  "input_hashes": {
+    "detections.csv": "9c39766e7d85d3dfe8adc56e81550d34e4d01f1817a60fbf9c6fa25c164b1f95",
+    "sequence_manifest.csv": "35f502d0d8d9972d49c6b5ae182756bc3a9291cb9030b826c278a2854044fbb8",
+    "REPORT.md": "9bf817926b37b4f0b0863a35bcd6bae62169f5f4598117cb1db5e20da96ce30d"
+  },
+  "total_runtime_s": 12.14
+}

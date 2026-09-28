@@ -35,10 +35,23 @@ htmlcov/
 .DS_Store
 Thumbs.db
 
-# Temporary files
+# Temporary files and logs
 *.tmp
 *.temp
 *.bak
+*.log
+
+# Build & packaging artifacts
+*.egg-info/
+dist/
+build/
+
+# Model weights, checkpoints, and serialization caches
+*.pt
+*.pth
+*.joblib
+**/cache/
+checkpoints/
 
 # Large/raw microscopy datasets, OME-Zarr stores, and GEFF graph archives
 *.zarr/
@@ -46,6 +59,8 @@ Thumbs.db
 *.geff/
 *.geff
 data/raw/
+data/kaggle_raw/
 data/processed/
 data/samples/*
 !data/samples/.gitkeep
+

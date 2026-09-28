@@ -1,0 +1,22 @@
+{
+  "experiment": "Phase 7I-A: Quarantined Held-out Evaluation",
+  "date": "2026-09-28",
+  "random_seed": 42,
+  "split": "held_out_val",
+  "sample_id": "6bba_43fea39d",
+  "sequences_evaluated": 12,
+  "frozen_selected_theta_um": 4.0,
+  "hard_gate_R_gate_um": 5.0,
+  "methods_evaluated": [
+    "Baseline_Hungarian",
+    "Selective_Theta4.0",
+    "Augmented_Hungarian_Theta5.0"
+  ],
+  "detectors_evaluated": [
+    "Learned_UNet_N1",
+    "Learned_UNet_N0",
+    "Classical_DoG"
+  ],
+  "inner_val_freeze_hash": "32240fc8ab5259969554fd17ac27936af60d0ee54bd0919e3916bcd09da8de92",
+  "total_runtime_s": 2.85
+}

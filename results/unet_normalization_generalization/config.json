@@ -1,0 +1,85 @@
+{
+  "experiment": "Phase 7G: Cross-Sample Intensity Normalization and Generalization Audit",
+  "random_seed": 42,
+  "device": "cuda",
+  "steps": 430,
+  "batch_size": 4,
+  "learning_rate": 0.001,
+  "weight_decay": 0.0001,
+  "patch_counts": {
+    "train": 86,
+    "inner_val": 20,
+    "held_out_val": 12,
+    "total": 118
+  },
+  "best_steps": {
+    "F1_N0": 380,
+    "F1_N1": 340,
+    "F1_N2": 300,
+    "F1_N3": 290
+  },
+  "best_val_losses": {
+    "F1_N0": 0.1256924271583557,
+    "F1_N1": 0.12614069879055023,
+    "F1_N2": 0.12454525381326675,
+    "F1_N3": 0.13034099340438843
+  },
+  "checkpoint_hashes": {
+    "best_F1_N0": "45024020082f95dac1318a953365e7e1264f14ee2b597580c5b4a5191cb68e37",
+    "final_F1_N0": "c8ad7df6cacee5cf4dbe38028031684c9eb56ad89a8d3742744985c68697d402",
+    "best_F1_N1": "fc61b5d6d571f5d0435666c5164690f33e4600bb8b3f6478b2afa62b48852128",
+    "final_F1_N1": "1ef3f3a9c84abe9db1c9a3191e8edd06f12b78079b804d2dd4cbc480405dfd84",
+    "best_F1_N2": "ac53d429194e27f716b214e097f7b6c4d95d085ce149ce2a197457fa63b0c523",
+    "final_F1_N2": "ba46aab05e18dc067fdf370b683e8c8230f3341542bdd6cd98b54a5a1b807feb",
+    "best_F1_N3": "cc4fee44e136ca43eb252a73d8083cabcae4a6b66f1c7325f884f5597405676b",
+    "final_F1_N3": "384c2253306adb572fa3176a3a1b2fd0cc92881b079b496b2a6b8833e9379f24"
+  },
+  "split_integrity": {
+    "status": "PASSED",
+    "train_samples": [
+      "44b6_d29c9ab2",
+      "6bba_bb9f20c3"
+    ],
+    "val_samples": [
+      "44b6_d29c9ab2",
+      "6bba_bb9f20c3"
+    ],
+    "held_out_samples": [
+      "6bba_43fea39d"
+    ],
+    "held_out_sample_strictly_quarantined": true,
+    "max_train_t": 55,
+    "min_inner_val_t": 70,
+    "temporal_buffer_frames": 15,
+    "spatial_overlap_violations": 0,
+    "total_train_patches": 86,
+    "total_inner_val_patches": 20,
+    "total_held_out_patches": 12
+  },
+  "variants": [
+    {
+      "id": "F1_N0",
+      "name": "Variant F1/N0: Baseline Preprocessing (Per-Patch Quantile)",
+      "norm_key": "norm_patch_n0",
+      "description": "Baseline calibrated head (-4.0) with Phase 7F per-patch quantile normalization."
+    },
+    {
+      "id": "F1_N1",
+      "name": "Variant F1/N1: Per-Volume Robust Percentile Scaling",
+      "norm_key": "norm_patch_n1",
+      "description": "Calibrated head (-4.0) with per-volume percentile normalization (q=0.02, 0.998)."
+    },
+    {
+      "id": "F1_N2",
+      "name": "Variant F1/N2: Per-Volume Robust Median / IQR Scaling",
+      "norm_key": "norm_patch_n2",
+      "description": "Calibrated head (-4.0) with per-volume median/IQR robust z-score normalization."
+    },
+    {
+      "id": "F1_N3",
+      "name": "Variant F1/N3: Local Contrast Normalization (LCN)",
+      "norm_key": "norm_patch_n3",
+      "description": "Calibrated head (-4.0) with 3D anisotropic local contrast normalization."
+    }
+  ]
+}
